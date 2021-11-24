@@ -51,12 +51,59 @@
       </div>
     </section>
 
-    <section class="covers"></section>
+    <section class="covers">
+      <h2 class="covers__title">Шоссе</h2>
+      <p class="covers__description">На шоссейном велосипеде
+        можно ездить по асфальту на разных градиентах: будь
+        то горы или равнины. Гонки проходят в командном пелотоне,
+        но тренироваться можно и самостоятельно.
+      </p>
+      <div class="covers__gallery-wrapper">
+        <div class="covers__gallery">
+          <img src="./images/shosse.jpg" alt="Шоссе" class="covers__image">
+          <img src="./images/gravel.jpg" alt="Грэвел" class="covers__image">
+          <img src="./images/tt.jpg" alt="ТТ" class="covers__image">
+          <img src="./images/shosse.jpg" alt="Шоссе" class="covers__image">
+        </div>
+      </div>
+      <div class="covers__controllers">
+        <button class="covers__prev covers__btn">
+          <img src="./images/arrow-left.svg" alt="Влево" class="covers__btn-image">
+        </button>
+        <button class="covers__next covers__btn">
+          <img src="./images/arrow-right.svg" alt="Вправо" class="covers__btn-image">
+        </button>
+      </div>
+    </section>
 
     <section class="bicycles"></section>
 
-    <section class="trainings"></section>
+    <section class="trainings">
+      <div class="trainings__all-texts">
+        <div class="trainings__info">
+          <h2 class="trainings__title">Тренировки</h2>
+          <p class="trainings__description">Чтобы найти маршрут для тренировки
+            можно воспользоваться сервисом Komoot, а записать эти тренировки
+            поможет приложение Strava, а также это приложение позволит построить
+            тренировочный план.
+          </p>
+        </div>
+        <div class="trainings__links">
+          <a href="" class="trainings__link">Strava</a>
+          <a href="" class="trainings__link">Komoot</a>
+        </div>
+      </div>
+      <img src="./images/trainings.jpg" alt="Дорога" class="trainings__image">
+    </section>
   </main>
-  <footer class="footer"></footer>
+  <footer class="footer">
+    <h3 class="footer__title">Подпишитесь на рассылку —</h3>
+    <form class="footer__form" action="">
+      <input class="footer__input" type="email" name="email" placeholder="Ваш e-mail" required>
+    </form>
+    <p class="footer__author">© Road Club 2021</p>
+    <div class="footer__color-mode"></div>
+  </footer>
+  <script src="scripts/script.js"></script>
 </body>
 </html>
