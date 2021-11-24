@@ -1,3 +1,40 @@
 .header {
-  color: white;
+  width: 100%;
+  padding: 28px 120px 28px 0;
+  box-sizing: border-box;
+  background-color: $bg-color-light;
+
+  display: flex;
+  justify-content: end;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
 }
+
+.header__sections {
+  display: flex;
+  align-items: center;
+
+}
+
+.header__element {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+
+  padding: 0;
+
+  &:nth-child(n) {
+    margin-right: 34px;
+  };
+  &:last-child {
+    margin-right: 0;
+  };
+}
+

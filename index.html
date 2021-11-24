@@ -3,12 +3,60 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="./styles/indes.css">
+  <title>Велосипеды</title>
+  <link rel="stylesheet" href="./vendor/normalize.css">
+  <link rel="stylesheet" href="./vendor/fonts/fonts.css">
+  <link rel="stylesheet" href="./styles/index.css">
 </head>
 <body class="page">
-  <header class="header"></header>
-  <main class="main"></main>
+
+  <header class="header">
+    <nav class="header__sections">
+      <button class="header__element">Покрытия и градиенты</button>
+      <button class="header__element">Велосипеды</button>
+      <button class="header__element">Тренировки</button>
+    </nav>
+  </header>
+
+  <main class="main">
+
+    <section class="about">
+      <h1 class="about__title">Шоссе, ТТ и&nbspГрэвел</h1>
+      <p class="about__subtitle">Триатлонные старты,
+        горные серпантины или грейвел заезды по живописным
+        маршрутам – нужно только определиться с выбором велосипеда
+        и отправиться в путь.
+      </p>
+      <a href="" class="about__link">Подробнее</a>
+      <div class="about__bike-name-wrapper">
+        <p class="about__bike-name">Cannondale Systemsix</p>
+        <div class="about__line"></div>
+      </div>
+      <img src="./images/forest.jpg" alt="Лес" class="about__image">
+      <!--
+        <div class="about__fixed-bike-wrapper">
+          <img src="./images/fixed-bike.jpg" alt="Липкий велосипед" class="about__fixed-bike">
+        </div>
+      -->
+    </section>
+
+    <section class="quote">
+      <img src="./images/houses_in_the_forest.jpg" alt="Дома в лесу" class="quote__image">
+      <div class="quote__cite">
+        <p class="quote__text">«Катайся много или мало, долго или коротко, как хочешь - но катайся»</p>
+        <div class="quote__about-authot">
+          <p class="quote__author">Эдди Меркс</p>
+          <p class="quote__job">Велогонщик</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="covers"></section>
+
+    <section class="bicycles"></section>
+
+    <section class="trainings"></section>
+  </main>
   <footer class="footer"></footer>
 </body>
 </html>
