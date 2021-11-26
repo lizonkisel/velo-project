@@ -25,16 +25,16 @@
 }
 
 .covers__gallery-wrapper {
-  /* width: 1320px; */
+  width: 100%;
+  /* width: 1320px / 1440px * 100vw; */
+  /* max-width: calc(100vw - 120px); */
   margin: 0 auto;
   overflow: hidden;
-  background-color: green;
 }
 
 .covers__gallery {
   display: flex;
   column-gap: 40px;
-  background-color: orchid;
   transition: .4s all ease-in-out;
 }
 

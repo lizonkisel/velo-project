@@ -4,8 +4,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Велосипеды</title>
-  <link rel="stylesheet" href="./vendor/normalize.css">
-  <link rel="stylesheet" href="./vendor/fonts/fonts.css">
   <link rel="stylesheet" href="./styles/index.css">
 </head>
 <body class="page">
@@ -76,7 +74,30 @@
       </div>
     </section>
 
-    <section class="bicycles"></section>
+    <section class="bicycles">
+      <div class="bicycles__header">
+        <h2 class="bicycles__title">Велосипеды</h2>
+        <nav class="bicycles__menu">
+          <input class="bicycles__menu-item" type="radio" name="bicycles" value="shosse" checked="checked">
+          <input class="bicycles__menu-item" type="radio" name="bicycles" value="gravel">
+          <input class="bicycles__menu-item" type="radio" name="bicycles" value="TT">
+        </nav>
+      </div>
+      <div class="bicycles__gallery">
+        <arictle class="card">
+          <img src="./images/1_1.jpg" alt="" class="card__image">
+          <h4 class="card__name">Cervelo Caledonia-5</h4>
+        </arictle>
+        <arictle class="card">
+          <img src="./images/1_2.jpg" alt="" class="card__image">
+          <h4 class="card__name">Cannondale Systemsix Himod</h4>
+        </arictle>
+        <arictle class="card">
+          <img src="./images/1_3.jpg" alt="" class="card__image">
+          <h4 class="card__name">Trek Domane SL-7</h4>
+        </arictle>
+      </div>
+    </section>
 
     <section class="trainings">
       <div class="trainings__all-texts">
@@ -95,6 +116,14 @@
       </div>
       <img src="./images/trainings.jpg" alt="Дорога" class="trainings__image">
     </section>
+
+    <template id="card">
+      <arictle class="card">
+        <img class="card__image" src="" alt="">
+        <h4 class="card__name"></h4>
+      </arictle>
+    </template>
+
   </main>
   <footer class="footer">
     <h3 class="footer__title">Подпишитесь на рассылку —</h3>
@@ -104,6 +133,7 @@
     <p class="footer__author">© Road Club 2021</p>
     <div class="footer__color-mode"></div>
   </footer>
+
   <script src="scripts/script.js"></script>
 </body>
 </html>
