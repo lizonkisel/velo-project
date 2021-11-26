@@ -1,4 +1,4 @@
-let position = 0;
+/* let position = 0;
 
 const gallery = document.querySelector('.covers__gallery');
 const galleryItem = document.querySelector('.covers__image');
@@ -36,7 +36,7 @@ btnNext.addEventListener('click', function () {
   console.log(position);
   gallery.style.transform = `translateX(${position}px)`;
   test();
-});
+}); */
 
 // Bicycle cards generation //
 
@@ -126,4 +126,62 @@ bicyclesMenu.addEventListener("click", function (event) {
     bicyclesGallery.append(cardElement);
   })
 })
+
+// Swiper
+
+const swiper = new Swiper('.covers__gallery-wrapper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+  slidesPerView: 2,
+  spaceBetween: 40,
+  speed: 400,
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.covers__next',
+    prevEl: '.covers__prev',
+  },
+
+});
+
+const texts = new Swiper('.covers__text-wrapper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+  slidesPerView: 2,
+  spaceBetween: 40,
+  speed: 400,
+});
+
+swiper.controller.control = texts;
+texts.controller.control = swiper;
+
+
+// Header scrollIntoView
+
+const headerMenuCovers = document.querySelector('.header__link_covers');
+const headerMenuBicycles = document.querySelector('.header__link_bicycles');
+const headerMenuTrainings = document.querySelector('.header__link_trainings');
+
+const covers = document.querySelector('.covers');
+const bicycles = document.querySelector('.bicycles');
+const trainings = document.querySelector('.trainings');
+
+headerMenuCovers.addEventListener('click', function() {
+  toScrollIntoView(covers)
+});
+
+headerMenuBicycles.addEventListener('click', function() {
+  toScrollIntoView(bicycles)
+});
+
+headerMenuTrainings.addEventListener('click', function() {
+  toScrollIntoView(trainings)
+});
+
+function toScrollIntoView(element) {
+  element.scrollIntoView({block: "start", behavior: "smooth"})
+};
+
 

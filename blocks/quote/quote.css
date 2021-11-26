@@ -1,0 +1,45 @@
+.quote {
+  box-sizing: border-box;
+  padding: 120px 120px 60px 120px;
+  display: flex;
+  -moz-column-gap: 80px;
+       column-gap: 80px;
+}
+
+.quote__image {
+  width: 45.1388888889vw;
+  max-height: 460px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.quote__cite {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.quote__text {
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 44px;
+  letter-spacing: -0.5px;
+  margin: 0;
+}
+
+.quote__author {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+  margin: 0;
+  margin-bottom: 6px;
+}
+
+.quote__job {
+  font-size: 16px;
+  line-height: 28px;
+  color: #222222;
+  opacity: 0.7;
+  margin: 0;
+}/*# sourceMappingURL=quote.css.map */

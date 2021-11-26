@@ -13,13 +13,12 @@
   z-index: 2;
 }
 
-.header__sections {
+.header__menu {
   display: flex;
   align-items: center;
-
 }
 
-.header__element {
+.header__link {
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -29,6 +28,7 @@
   line-height: 18px;
 
   padding: 0;
+  transition: opacity .3s ease-in-out;
 
   &:nth-child(n) {
     margin-right: 34px;
@@ -36,5 +36,9 @@
   &:last-child {
     margin-right: 0;
   };
+
+  &:hover {
+    opacity: 0.75;
+  }
 }
 

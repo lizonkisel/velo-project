@@ -4,15 +4,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Велосипеды</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
   <link rel="stylesheet" href="./styles/index.css">
+
 </head>
 <body class="page">
 
   <header class="header">
-    <nav class="header__sections">
-      <button class="header__element">Покрытия и градиенты</button>
-      <button class="header__element">Велосипеды</button>
-      <button class="header__element">Тренировки</button>
+    <nav class="header__menu">
+      <button class="header__link header__link_covers">Покрытия и градиенты</button>
+      <button class="header__link header__link_bicycles">Велосипеды</button>
+      <button class="header__link header__link_trainings">Тренировки</button>
     </nav>
   </header>
 
@@ -50,27 +53,58 @@
     </section>
 
     <section class="covers">
-      <h2 class="covers__title">Шоссе</h2>
-      <p class="covers__description">На шоссейном велосипеде
-        можно ездить по асфальту на разных градиентах: будь
-        то горы или равнины. Гонки проходят в командном пелотоне,
-        но тренироваться можно и самостоятельно.
-      </p>
-      <div class="covers__gallery-wrapper">
-        <div class="covers__gallery">
-          <img src="./images/shosse.jpg" alt="Шоссе" class="covers__image">
-          <img src="./images/gravel.jpg" alt="Грэвел" class="covers__image">
-          <img src="./images/tt.jpg" alt="ТТ" class="covers__image">
-          <img src="./images/shosse.jpg" alt="Шоссе" class="covers__image">
+      <div class="covers__text-wrapper swiper">
+        <div class="covers__texts swiper-wrapper">
+          <div class="covers__slide-text swiper-slide">
+            <h2 class="covers__title">Шоссе</h2>
+            <p class="covers__description">На шоссейном велосипеде
+              можно ездить по асфальту на разных градиентах: будь
+              то горы или равнины. Гонки проходят в командном пелотоне,
+              но тренироваться можно и самостоятельно.
+            </p>
+          </div>
+          <div class="covers__slide-text swiper-slide">
+            <h2 class="covers__title">Gоссе</h2>
+            <p class="covers__description">На шоссейном велосипеде
+              можно ездить по асфальту на разных градиентах: будь
+              то горы или равнины. Гонки проходят в командном пелотоне,
+              но тренироваться можно и самостоятельно.
+            </p>
+          </div>
+          <div class="covers__slide-text swiper-slide">
+            <h2 class="covers__title">Pоссе</h2>
+            <p class="covers__description">На шоссейном велосипеде
+              можно ездить по асфальту на разных градиентах: будь
+              то горы или равнины. Гонки проходят в командном пелотоне,
+              но тренироваться можно и самостоятельно.
+            </p>
+          </div>
         </div>
       </div>
-      <div class="covers__controllers">
-        <button class="covers__prev covers__btn">
-          <img src="./images/arrow-left.svg" alt="Влево" class="covers__btn-image">
-        </button>
-        <button class="covers__next covers__btn">
-          <img src="./images/arrow-right.svg" alt="Вправо" class="covers__btn-image">
-        </button>
+
+      <div class="covers__gallery-wrapper swiper">
+
+        <div class="covers__gallery swiper-wrapper">
+          <div class="covers__slide swiper-slide">
+            <img src="./images/shosse.jpg" alt="" class="covers__image">
+          </div>
+          <div class="covers__slide swiper-slide">
+            <img src="./images/gravel.jpg" alt="" class="covers__image">
+          </div>
+          <div class="covers__slide swiper-slide">
+            <img src="./images/tt.jpg" alt="" class="covers__image">
+          </div>
+        </div>
+
+        <div class="covers__controllers">
+          <button class="covers__prev covers__btn swiper-button-prev">
+            <img src="./images/arrow-left.svg" alt="Влево" class="covers__btn-image">
+          </button>
+          <button class="covers__next covers__btn swiper-button-prev">
+            <img src="./images/arrow-right.svg" alt="Вправо" class="covers__btn-image">
+          </button>
+        </div>
+
       </div>
     </section>
 
@@ -110,8 +144,8 @@
           </p>
         </div>
         <div class="trainings__links">
-          <a href="" class="trainings__link">Strava</a>
-          <a href="" class="trainings__link">Komoot</a>
+          <a class="trainings__link" href="https://www.komoot.com" target="_blank" >Strava</a>
+          <a class="trainings__link" href="https://www.strava.com" target="_blank">Komoot</a>
         </div>
       </div>
       <img src="./images/trainings.jpg" alt="Дорога" class="trainings__image">
