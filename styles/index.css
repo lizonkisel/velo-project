@@ -802,6 +802,10 @@ template {
      object-fit: contain;
 }
 
+.footer {
+  background-color: #EFEFEF;
+}
+
 .footer__title {
   font-weight: 600;
   font-size: 24px;
