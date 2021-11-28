@@ -1,0 +1,9 @@
+.about__bike-name-wrapper {
+  grid-column: 1/2;
+  grid-row: 4/5;
+  /* align-self: end; */
+
+  display: flex;
+  /* padding-top: 117px; */
+  padding-top: 117px / 1440px * 100vw;
+}

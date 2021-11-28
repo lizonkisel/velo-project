@@ -364,25 +364,41 @@ template {
   font-family: "Inter", "Arial", sans-serif;
 }
 
-.header {
+.page__header {
   width: 100%;
   padding: 28px 120px 28px 0;
   box-sizing: border-box;
-  background-color: #f4f4f4;
-  display: flex;
-  justify-content: end;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 2;
 }
 
-.header__sections {
+.page__main {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-top: 74px;
+}
+
+.page__footer {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 80px 120px 60px 120px;
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: end;
+}
+
+.header__menu {
   display: flex;
   align-items: center;
 }
 
-.header__element {
+.header__link {
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -390,18 +406,41 @@ template {
   font-size: 14px;
   line-height: 18px;
   padding: 0;
+  transition: opacity 0.3s ease-in-out;
 }
-.header__element:nth-child(n) {
+.header__link:nth-child(n) {
   margin-right: 34px;
 }
-.header__element:last-child {
+.header__link:last-child {
   margin-right: 0;
 }
+.header__link:hover {
+  opacity: 0.75;
+}
 
-.main {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding-top: 74px;
+.main__about {
+  padding: 20px 0 0 120px;
+  position: relative;
+}
+
+.main__quote {
+  box-sizing: border-box;
+  padding: 120px 120px 60px 120px;
+}
+
+.main__covers {
+  padding: 60px 0 60px 120px;
+  box-sizing: border-box;
+}
+
+.main__bicycles {
+  padding: 60px 120px;
+  box-sizing: border-box;
+}
+
+.main__trainings {
+  padding: 150px 120px 120px 120px;
+  box-sizing: border-box;
 }
 
 .about {
@@ -411,8 +450,6 @@ template {
   -moz-column-gap: 17.3611111111vw;
        column-gap: 17.3611111111vw;
   row-gap: 50px;
-  padding: 20px 0 0 120px;
-  position: relative;
 }
 
 .about__title {
@@ -451,6 +488,10 @@ template {
   line-height: 18px;
   text-align: center;
   letter-spacing: 1px;
+  transition: background-color 0.3s ease-in-out;
+}
+.about__link:hover {
+  background-color: #319E75;
 }
 
 .about__bike-name-wrapper {
@@ -506,8 +547,6 @@ template {
 }
 
 .quote {
-  box-sizing: border-box;
-  padding: 120px 120px 60px 120px;
   display: flex;
   -moz-column-gap: 80px;
        column-gap: 80px;
@@ -551,12 +590,9 @@ template {
   margin: 0;
 }
 
-.covers {
-  padding: 60px 0 60px 120px;
-  box-sizing: border-box;
-}
-
 .covers__title {
+  width: 100%;
+  overflow: hidden;
   font-weight: 700;
   font-size: 55px;
   line-height: 60px;
@@ -565,6 +601,8 @@ template {
 }
 
 .covers__description {
+  width: 100%;
+  overflow: hidden;
   font-weight: 400;
   font-size: 18px;
   line-height: 28px;
@@ -577,21 +615,16 @@ template {
 
 .covers__gallery-wrapper {
   width: 100%;
-  /* width: 1320px / 1440px * 100vw; */
-  /* max-width: calc(100vw - 120px); */
-  margin: 0 auto;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
-.covers__gallery {
-  display: flex;
-  -moz-column-gap: 40px;
-       column-gap: 40px;
-  transition: 0.4s all ease-in-out;
+.covers__slide {
+  width: 45.1388888889vw;
 }
 
 .covers__image {
-  width: 45.1388888889vw;
+  width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -599,22 +632,29 @@ template {
 .covers__controllers {
   margin: 0;
   margin-top: 50px;
+  display: flex;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
 }
 
 .covers__btn {
+  position: static;
   border: none;
   text-decoration: none;
   width: 50px;
   height: 50px;
   background: #EBEBEB;
   border-radius: 50px;
-  padding: 17px 23px 17px 20px;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  transition: opacity 0.3s ease-in-out;
 }
-
-.bicycles {
-  padding: 60px 120px;
-  box-sizing: border-box;
+.covers__btn::after {
+  content: none;
+}
+.covers__btn:hover {
+  opacity: 0.6;
 }
 
 .bicycles__header {
@@ -631,17 +671,40 @@ template {
 }
 
 .bicycles__menu {
+  margin-top: 32px;
+}
+
+.bicycles__form {
+  margin: 0;
   display: flex;
   -moz-column-gap: 40px;
        column-gap: 40px;
 }
 
-.bicycles__menu-item {
+.bicycles__menu-label {
+  font-weight: 400;
   font-size: 18px;
   line-height: 28px;
   text-align: right;
   color: #222222;
   opacity: 0.7;
+  transition: opacity 0.3s ease-in-out;
+}
+.bicycles__menu-label:hover {
+  opacity: 0.6;
+}
+
+.bicycles__menu-label_active {
+  font-weight: 600;
+  color: #151515;
+  opacity: 1;
+}
+.bicycles__menu-label_active:hover {
+  opacity: 0.75;
+}
+
+.bicycles__menu-item {
+  display: none;
 }
 
 .bicycles__gallery {
@@ -651,31 +714,37 @@ template {
   padding-top: 120px;
 }
 
-.card {
-  width: 31.6666666667%;
-  height: 380px;
-  filter: drop-shadow(0px 20px 140px rgba(0, 0, 0, 0.06));
-  padding: 20px;
-  background-color: #f4f4f4;
-}
-
 .card__image {
   -o-object-fit: contain;
      object-fit: contain;
   width: 100%;
+  background-color: #f4f4f4;
+  padding: 20px;
+  box-sizing: border-box;
+  filter: drop-shadow(0px 20px 140px rgba(0, 0, 0, 0.06));
+  transition: filter 0.3s ease-in-out;
+}
+.card__image:hover {
+  filter: drop-shadow(0px 20px 140px rgba(0, 0, 0, 0.11));
 }
 
 .card__name {
+  display: block;
+  text-decoration: none;
+  color: #151515;
   font-weight: 600;
   font-size: 18px;
   line-height: 22px;
+  margin: 0;
+  margin-top: 22px;
 }
 
 .trainings {
   display: flex;
   justify-content: space-between;
-  padding: 150px 120px 120px 120px;
-  box-sizing: border-box;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .trainings__all-texts {
@@ -717,8 +786,11 @@ template {
   margin: 0;
   margin-right: 30px;
   padding: 0;
+  transition: opacity 0.3s ease-in-out;
 }
-
+.trainings__link:hover {
+  opacity: 0.75;
+}
 .trainings__link:last-of-type {
   margin-right: 0;
 }
@@ -730,16 +802,12 @@ template {
      object-fit: contain;
 }
 
-.footer {
-  padding: 80px 120px 60px 120px;
-  box-sizing: border-box;
-}
-
 .footer__title {
   font-weight: 600;
   font-size: 24px;
   line-height: 32px;
   margin: 0;
+  max-width: 229px;
 }
 
 .footer__form {
@@ -767,6 +835,24 @@ template {
 }
 .footer__input::placeholder {
   opacity: 0.7;
+}
+
+.footer__submit {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 28px;
+  text-align: right;
+  border: none;
+  background-color: transparent;
+  opacity: 0;
+  position: relative;
+  left: -10%;
+  width: 30px;
+  height: 30px;
+}
+
+.footer__submit:focus {
+  display: inline;
 }
 
 .footer__author {

@@ -1,61 +1,7 @@
 .trainings {
   display: flex;
   justify-content: space-between;
-  padding: 150px 120px 120px 120px;
-  box-sizing: border-box;
-}
+  column-gap: 20px;
 
-.trainings__all-texts {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.trainings__info {
-  display: flex;
-  flex-direction: column;
-}
-
-.trainings__title {
-  font-weight: 700;
-  font-size: 55px;
-  line-height: 60px;
-  letter-spacing: -0.5px;
-
-  margin: 0;
-}
-
-.trainings__description {
-  max-width: 460px;
-
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 28px;
-  color: #222222;
-  opacity: 0.7;
-
-  margin: 0;
-  margin-top: 50px;
-}
-
-.trainings__link {
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 28px;
-  color: #151515;
-
-  margin: 0;
-  margin-right: 30px;
-  padding: 0;
-}
-
-.trainings__link:last-of-type {
-  margin-right: 0;
-}
-
-.trainings__image {
-  width: 560px / 1440px * 100vw;
-  max-width: 560px;
-  object-fit: contain;
+  transition: opacity .3s ease-in-out;
 }

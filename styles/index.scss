@@ -1,12 +1,71 @@
 @import "../vendor/normalize";
 @import "../vendor/fonts/fonts";
 @import "../blocks/variables.scss";
+
 @import "../blocks/page/page.scss";
+@import "../blocks/page/__header/page__header.scss";
+@import "../blocks/page/__main/page__main.scss";
+@import "../blocks/page/__footer/page__footer.scss";
+
 @import "../blocks/header/header.scss";
-@import "../blocks/main/main.scss";
+@import "../blocks/header/__menu/header__menu.scss";
+@import "../blocks/header/__link/header__link.scss";
+
+@import "../blocks/main/__about/main__about.scss";
+@import "../blocks/main/__quote/main__quote.scss";
+@import "../blocks/main/__covers/main__covers.scss";
+@import "../blocks/main/__bicycles/main__bicycles.scss";
+@import "../blocks/main/__trainings/main__trainings.scss";
+
+
 @import "../blocks/about/about.scss";
+@import "../blocks/about/__title/about__title.scss";
+@import "../blocks/about/__subtitle/about__subtitle.scss";
+@import "../blocks/about/__link/about__link.scss";
+@import "../blocks/about/__bike-name-wrapper/about__bike-name-wrapper.scss";
+@import "../blocks/about/__bike-name/about__bike-name.scss";
+@import "../blocks/about/__line/about__line.scss";
+@import "../blocks/about/__image/about__image.scss";
+@import "../blocks/about/__fixed-bike-wrapper/about__fixed-bike-wrapper.scss";
+@import "../blocks/about/__fixed-bike/about__fixed-bike.scss";
+
 @import "../blocks/quote/quote.scss";
-@import "../blocks/covers/covers.scss";
-@import "../blocks/bicycles/bicycles.scss";
+@import "../blocks/quote/__image/quote__image.scss";
+@import "../blocks/quote/__cite/quote__cite.scss";
+@import "../blocks/quote/__text/quote__text.scss";
+@import "../blocks/quote/__author/quote__author.scss";
+@import "../blocks/quote/__job/quote__job.scss";
+
+@import "../blocks/covers/__title/covers__title.scss";
+@import "../blocks/covers/__description/covers__description.scss";
+@import "../blocks/covers/__gallery-wrapper/covers__gallery-wrapper.scss";
+@import "../blocks/covers/__slide/covers__slide.scss";
+@import "../blocks/covers/__image/covers__image.scss";
+@import "../blocks/covers/__controllers/covers__controllers.scss";
+@import "../blocks/covers/__btn/covers__btn.scss";
+
+@import "../blocks/bicycles/__header/bicycles__header.scss";
+@import "../blocks/bicycles/__title/bicycles__title.scss";
+@import "../blocks/bicycles/__menu/bicycles__menu.scss";
+@import "../blocks/bicycles/__form/bicycles__form.scss";
+@import "../blocks/bicycles/__menu-label/bicycles__menu-label.scss";
+@import "../blocks/bicycles/__menu-label/_active/bicycles__menu-label_active.scss";
+@import "../blocks/bicycles/__menu-item/bicycles__menu-item.scss";
+@import "../blocks/bicycles/__gallery/bicycles__gallery.scss";
+
+@import "../blocks/card/__image/card__image.scss";
+@import "../blocks/card/__name/card__name.scss";
+
 @import "../blocks/trainings/trainings.scss";
-@import "../blocks/footer/footer.scss";
+@import "../blocks/trainings/__all-texts/trainings__all-texts.scss";
+@import "../blocks/trainings/__info/trainings__info.scss";
+@import "../blocks/trainings/__title/trainings__title.scss";
+@import "../blocks/trainings/__description/trainings__description.scss";
+@import "../blocks/trainings/__link/trainings__link.scss";
+@import "../blocks/trainings/__image/trainings__image.scss";
+
+@import "../blocks/footer/__title/footer__title.scss";
+@import "../blocks/footer/__form/footer__form.scss";
+@import "../blocks/footer/__input/footer__input.scss";
+@import "../blocks/footer/__submit/footer__submit.scss";
+@import "../blocks/footer/__author/footer__author.scss";
