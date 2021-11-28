@@ -1,0 +1,9 @@
+.about__image {
+  grid-column: 2/3;
+  grid-row: 1/5;
+
+  object-fit: contain;
+  width: 610px / 1440px * 100vw;
+  max-width: 610px;
+  max-height: 100%;
+}

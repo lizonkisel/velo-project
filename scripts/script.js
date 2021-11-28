@@ -1,43 +1,3 @@
-/* let position = 0;
-
-const gallery = document.querySelector('.covers__gallery');
-const galleryItem = document.querySelector('.covers__image');
-const galleryItemWidth = galleryItem.offsetWidth;
-
-let borderValue = galleryItemWidth * 3 + 40 * 2;
-
-const btnPrev = document.querySelector('.covers__prev');
-const btnNext = document.querySelector('.covers__next');
-
-function test() {
-  console.log(position === ((galleryItemWidth + 40) * (-2)));
-  if (position === 0) {
-    btnPrev.disabled = true;
-    console.log('one');
-  } else if (position > ((galleryItemWidth + 40) * (-2))) {
-    btnPrev.disabled = false;
-    btnNext.disabled = false;
-    console.log('two');
-  } else if (position === ((galleryItemWidth + 40) * (-2))) {
-    btnNext.disabled = true;
-    console.log('three');
-  }
-}
-
-btnPrev.addEventListener('click', function () {
-  position += galleryItemWidth + 40;
-  console.log(position);
-  gallery.style.transform = `translateX(${position}px)`;
-  test();
-});
-
-btnNext.addEventListener('click', function () {
-  position -= galleryItemWidth + 40;
-  console.log(position);
-  gallery.style.transform = `translateX(${position}px)`;
-  test();
-}); */
-
 // Bicycle cards generation //
 
 const bicyclesArray = [
@@ -45,15 +5,18 @@ const bicyclesArray = [
     categoryName: "shosse",
     first: {
       name: "Cervelo Caledonia-5",
-      url: "./images/1_1.jpg"
+      url: "./images/1_1.jpg",
+      link: "https://www.sigmasports.com/item/Cervelo/Caledonia-5-Ultegra-Disc-Road-Bike-2021/RDEN"
     },
     second: {
       name: "Cannondale Systemsix Himod",
-      url: "./images/1_2.jpg"
+      url: "./images/1_2.jpg",
+      link: "https://www.sigmasports.com/item/Cannondale/SystemSix-HiMOD-Ultegra-Di2-Disc-Road-Bike-2021/R82J"
     },
     third: {
       name: "Trek Domane SL-7",
-      url: "./images/1_3.jpg"
+      url: "./images/1_3.jpg",
+      link: "https://www.sigmasports.com/item/Trek/Domane-SL-7-Force-eTap-AXS-Disc-Road-Bike-2021/RULF"
     }
   },
 
@@ -61,15 +24,18 @@ const bicyclesArray = [
     categoryName: "gravel",
     first: {
       name: "Cervelo Aspero GRX 810",
-      url: "./images/2_1.jpg"
+      url: "./images/2_1.jpg",
+      link: "https://www.sigmasports.com/item/Cervelo/Aspero-GRX-810-1x-Disc-Gravel-Bike-2021/RJDE"
     },
     second: {
       name: "Specialized S-Works Diverge",
-      url: "./images/2_2.jpg"
+      url: "./images/2_2.jpg",
+      link: "https://www.sigmasports.com/item/Specialized/S-Works-Diverge-Gravel-Bike-2020/NVJ9"
     },
     third: {
       name: "Cannondale Topstone Lefty 3",
-      url: "./images/2_3.jpg"
+      url: "./images/2_3.jpg",
+      link: "https://www.sigmasports.com/item/Cannondale/Topstone-Carbon-Lefty-3-Disc-Gravel-Road-Bike-2021/PUC8"
     }
   },
 
@@ -77,15 +43,18 @@ const bicyclesArray = [
     categoryName: "TT",
     first: {
       name: "Specialized S-Works Shiv",
-      url: "./images/3_1.jpg"
+      url: "./images/3_1.jpg",
+      link: "https://www.sigmasports.com/item/Specialized/S-Works-Shiv-Disc-Limited-Edition-Triathlon-Bike-2019/K8P9"
     },
     second: {
       name: "BMC Timemachine 01 ONE",
-      url: "./images/3_2.jpg"
+      url: "./images/3_2.jpg",
+      link: "https://www.sigmasports.com/item/BMC/Timemachine-01-One-Force-Disc-TT-Triathlon-Bike-2021/S835"
     },
     third: {
       name: "Cervelo P-Series",
-      url: "./images/3_3.jpg"
+      url: "./images/3_3.jpg",
+      link: "https://www.sigmasports.com/item/Cervelo/P-Series-Ultegra-Di2-TT-Triathlon-Bike-2021/RM6Q"
     }
   },
 ]
@@ -107,6 +76,7 @@ bicyclesMenu.addEventListener("click", function (event) {
     return;
   }
   deleteCards();
+  makeLabelactive(button);
   const buttonName = button.value;
   const neededObject = bicyclesArray.find(function (item) {
     return item.categoryName === buttonName;
@@ -116,16 +86,28 @@ bicyclesMenu.addEventListener("click", function (event) {
   neededArray.forEach(function(item) {;
     const neededImageUrl = item[1].url;
     const neededName = item[1].name;
-    console.log(neededImageUrl);
-    console.log(neededName);
+    const neededLink = item[1].link;
 
     const cardElement = cardTemplate.querySelector(".card").cloneNode(true);
     cardElement.querySelector('.card__image').src = neededImageUrl;
     cardElement.querySelector('.card__name').textContent = neededName;
+    cardElement.querySelector('.card__name').href = neededLink;
 
     bicyclesGallery.append(cardElement);
   })
-})
+});
+
+function makeLabelactive(button) {
+  const menuLabels = bicyclesMenu.querySelectorAll('.bicycles__menu-label');
+  menuLabels.forEach(function(item) {
+    item.classList.remove('bicycles__menu-label_active');
+  })
+  const label = bicyclesMenu.querySelector(`[for="${button.id}"]`);
+  label.classList.add('bicycles__menu-label_active');
+}
+
+bicyclesMenu.querySelector('.bicycles__menu-item').checked = true;
+
 
 // Swiper
 
@@ -145,17 +127,32 @@ const swiper = new Swiper('.covers__gallery-wrapper', {
 
 });
 
-const texts = new Swiper('.covers__text-wrapper', {
-  // Optional parameters
-  direction: 'horizontal',
-  loop: true,
-  slidesPerView: 2,
-  spaceBetween: 40,
-  speed: 400,
-});
+const coversTitle = document.querySelector('.covers__title');
+const coversDescription = document.querySelector('.covers__description');
 
-swiper.controller.control = texts;
-texts.controller.control = swiper;
+const coversArray = [
+  {
+    title: "Шоссе",
+    description: "На шоссейном велосипеде можно ездить по асфальту на разных градиентах: будь то горы или равнины. Гонки проходят в командном пелотоне, но тренироваться можно и самостоятельно."
+  },
+
+  {
+    title: "Грэвел",
+    description: "Грэвел похож на шоссейный велосипед, но конструкция рамы немного отличается, и на нём стоят более широкие покрышки, всё для того чтобы проехать по лёгкому бездорожью."
+  },
+
+  {
+    title: "ТТ",
+    description: "ТТ — это велосипед для триатлона или раздельного старта, гооняют на таком велике только по равнинному асфальту, велик очень быстрые и аэродинамичный."
+  }
+];
+
+swiper.on('slideChange', function () {
+  const currentIndex = this.realIndex;
+
+  coversTitle.textContent = coversArray[currentIndex].title;
+  coversDescription.textContent = coversArray[currentIndex].description;
+});
 
 
 // Header scrollIntoView
@@ -183,5 +180,27 @@ headerMenuTrainings.addEventListener('click', function() {
 function toScrollIntoView(element) {
   element.scrollIntoView({block: "start", behavior: "smooth"})
 };
+
+// footer form
+
+const footerForm = document.querySelector('.footer__form');
+const footerInput = document.querySelector('.footer__input');
+const footerSubmit = document.querySelector('.footer__submit');
+
+footerForm.reset();
+
+footerInput.addEventListener('focus', function() {
+  footerSubmit.style.opacity = 1;
+})
+
+footerInput.addEventListener('blur', function() {
+  footerSubmit.style.opacity = 0;
+})
+
+footerSubmit.addEventListener('click', function() {
+  if (footerInput.checkValidity() === true) {
+    footerInput.value = "Круто!";
+  }
+})
 
 

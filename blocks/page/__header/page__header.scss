@@ -1,0 +1,11 @@
+.page__header {
+  width: 100%;
+  //max-width: 1440px;
+  padding: 28px 120px 28px 0;
+  box-sizing: border-box;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}

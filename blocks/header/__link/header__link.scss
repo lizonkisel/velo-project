@@ -1,0 +1,23 @@
+.header__link {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+
+  padding: 0;
+  transition: opacity .3s ease-in-out;
+
+  &:nth-child(n) {
+    margin-right: 34px;
+  };
+  &:last-child {
+    margin-right: 0;
+  };
+
+  &:hover {
+    opacity: 0.75;
+  }
+}

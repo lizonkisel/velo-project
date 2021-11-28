@@ -11,7 +11,7 @@
 </head>
 <body class="page">
 
-  <header class="header">
+  <header class="header page__header">
     <nav class="header__menu">
       <button class="header__link header__link_covers">Покрытия и градиенты</button>
       <button class="header__link header__link_bicycles">Велосипеды</button>
@@ -19,9 +19,9 @@
     </nav>
   </header>
 
-  <main class="main">
+  <main class="main page__main">
 
-    <section class="about">
+    <section class="about main__about">
       <h1 class="about__title">Шоссе, ТТ и&nbspГрэвел</h1>
       <p class="about__subtitle">Триатлонные старты,
         горные серпантины или грейвел заезды по живописным
@@ -41,8 +41,8 @@
       -->
     </section>
 
-    <section class="quote">
-      <img src="./images/houses_in_the_forest.jpg" alt="Дома в лесу" class="quote__image">
+    <section class="quote main__quote">
+      <img class="quote__image" src="./images/houses_in_the_forest.jpg" alt="Дома в лесу">
       <div class="quote__cite">
         <p class="quote__text">«Катайся много или мало, долго или коротко, как хочешь - но катайся»</p>
         <div class="quote__about-authot">
@@ -52,88 +52,67 @@
       </div>
     </section>
 
-    <section class="covers">
-      <div class="covers__text-wrapper swiper">
-        <div class="covers__texts swiper-wrapper">
-          <div class="covers__slide-text swiper-slide">
-            <h2 class="covers__title">Шоссе</h2>
-            <p class="covers__description">На шоссейном велосипеде
-              можно ездить по асфальту на разных градиентах: будь
-              то горы или равнины. Гонки проходят в командном пелотоне,
-              но тренироваться можно и самостоятельно.
-            </p>
-          </div>
-          <div class="covers__slide-text swiper-slide">
-            <h2 class="covers__title">Gоссе</h2>
-            <p class="covers__description">На шоссейном велосипеде
-              можно ездить по асфальту на разных градиентах: будь
-              то горы или равнины. Гонки проходят в командном пелотоне,
-              но тренироваться можно и самостоятельно.
-            </p>
-          </div>
-          <div class="covers__slide-text swiper-slide">
-            <h2 class="covers__title">Pоссе</h2>
-            <p class="covers__description">На шоссейном велосипеде
-              можно ездить по асфальту на разных градиентах: будь
-              то горы или равнины. Гонки проходят в командном пелотоне,
-              но тренироваться можно и самостоятельно.
-            </p>
-          </div>
-        </div>
-      </div>
-
+    <section class="covers main__covers">
+      <h2 class="covers__title">Шоссе</h2>
+        <p class="covers__description">На шоссейном велосипеде
+          можно ездить по асфальту на разных градиентах: будь
+          то горы или равнины. Гонки проходят в командном пелотоне,
+          но тренироваться можно и самостоятельно.
+        </p>
       <div class="covers__gallery-wrapper swiper">
-
         <div class="covers__gallery swiper-wrapper">
           <div class="covers__slide swiper-slide">
-            <img src="./images/shosse.jpg" alt="" class="covers__image">
+            <img class="covers__image" src="./images/shosse.jpg" alt="">
           </div>
           <div class="covers__slide swiper-slide">
-            <img src="./images/gravel.jpg" alt="" class="covers__image">
+            <img class="covers__image" src="./images/gravel.jpg" alt="">
           </div>
           <div class="covers__slide swiper-slide">
-            <img src="./images/tt.jpg" alt="" class="covers__image">
+            <img class="covers__image" src="./images/tt.jpg" alt="">
           </div>
         </div>
-
         <div class="covers__controllers">
-          <button class="covers__prev covers__btn swiper-button-prev">
-            <img src="./images/arrow-left.svg" alt="Влево" class="covers__btn-image">
+          <button class="covers__btn covers__prev swiper-button-prev">
+            <img class="covers__btn-image" src="./images/arrow-left.svg" alt="Влево">
           </button>
-          <button class="covers__next covers__btn swiper-button-prev">
-            <img src="./images/arrow-right.svg" alt="Вправо" class="covers__btn-image">
+          <button class="covers__btn covers__next swiper-button-prev">
+            <img class="covers__btn-image" src="./images/arrow-right.svg" alt="Вправо">
           </button>
         </div>
-
       </div>
     </section>
 
-    <section class="bicycles">
+    <section class="bicycles main__bicycles">
       <div class="bicycles__header">
         <h2 class="bicycles__title">Велосипеды</h2>
         <nav class="bicycles__menu">
-          <input class="bicycles__menu-item" type="radio" name="bicycles" value="shosse" checked="checked">
-          <input class="bicycles__menu-item" type="radio" name="bicycles" value="gravel">
-          <input class="bicycles__menu-item" type="radio" name="bicycles" value="TT">
+          <form class="bicycles__form" action="">
+            <label class="bicycles__menu-label bicycles__menu-label_active" for="shosse">Шоссе</label>
+            <input class="bicycles__menu-item" id="shosse" type="radio" name="bicycles" value="shosse" checked>
+            <label class="bicycles__menu-label" for="gravel">Грэвел</label>
+            <input class="bicycles__menu-item" id="gravel" type="radio" name="bicycles" value="gravel" autocomplete='off'>
+            <label class="bicycles__menu-label" for="TT">ТТ</label>
+            <input class="bicycles__menu-item" id="TT" type="radio" name="bicycles" value="TT" autocomplete='off'>
+          </form>
         </nav>
       </div>
       <div class="bicycles__gallery">
         <arictle class="card">
           <img src="./images/1_1.jpg" alt="" class="card__image">
-          <h4 class="card__name">Cervelo Caledonia-5</h4>
+          <a class="card__name" href="https://www.sigmasports.com/item/Cervelo/Caledonia-5-Ultegra-Disc-Road-Bike-2021/RDEN" target="_blank">Cervelo Caledonia-5</a>
         </arictle>
         <arictle class="card">
           <img src="./images/1_2.jpg" alt="" class="card__image">
-          <h4 class="card__name">Cannondale Systemsix Himod</h4>
+          <a class="card__name" href="https://www.sigmasports.com/item/Cannondale/SystemSix-HiMOD-Ultegra-Di2-Disc-Road-Bike-2021/R82J" target="_blank">Cannondale Systemsix Himod</a>
         </arictle>
         <arictle class="card">
           <img src="./images/1_3.jpg" alt="" class="card__image">
-          <h4 class="card__name">Trek Domane SL-7</h4>
+          <a class="card__name" href="https://www.sigmasports.com/item/Trek/Domane-SL-7-Force-eTap-AXS-Disc-Road-Bike-2021/RULF" target="_blank">Trek Domane SL-7</a>
         </arictle>
       </div>
     </section>
 
-    <section class="trainings">
+    <section class="trainings main__trainings">
       <div class="trainings__all-texts">
         <div class="trainings__info">
           <h2 class="trainings__title">Тренировки</h2>
@@ -148,21 +127,22 @@
           <a class="trainings__link" href="https://www.strava.com" target="_blank">Komoot</a>
         </div>
       </div>
-      <img src="./images/trainings.jpg" alt="Дорога" class="trainings__image">
+      <img class="trainings__image" src="./images/trainings.jpg" alt="Дорога">
     </section>
 
     <template id="card">
       <arictle class="card">
         <img class="card__image" src="" alt="">
-        <h4 class="card__name"></h4>
+        <a href="" class="card__name" target="_blank"></a>
       </arictle>
     </template>
 
   </main>
-  <footer class="footer">
+  <footer class="footer page__footer">
     <h3 class="footer__title">Подпишитесь на рассылку —</h3>
     <form class="footer__form" action="">
       <input class="footer__input" type="email" name="email" placeholder="Ваш e-mail" required>
+      <input class="footer__submit" type="submit" value="ok">
     </form>
     <p class="footer__author">© Road Club 2021</p>
     <div class="footer__color-mode"></div>

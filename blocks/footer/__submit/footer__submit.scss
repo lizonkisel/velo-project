@@ -1,0 +1,19 @@
+.footer__submit {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 28px;
+  text-align: right;
+  border: none;
+  background-color: transparent;
+
+  opacity: 0;
+  position: relative;
+  left: -10%;
+
+  width: 30px;
+  height: 30px;
+}
+
+.footer__submit:focus {
+  display: inline;
+}
