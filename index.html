@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
   <link rel="stylesheet" href="./styles/index.css">
+  <link rel="stylesheet" href="./styles/light.css" media="(prefers-color-scheme: light)">
+  <link rel="stylesheet" href="./styles/dark.css" media="(prefers-color-scheme: dark)">
 
 </head>
 <body class="page">
@@ -144,8 +146,19 @@
       <input class="footer__input" type="email" name="email" placeholder="Ваш e-mail" required>
       <input class="footer__submit" type="submit" value="ok">
     </form>
-    <p class="footer__author">© Road Club 2021</p>
-    <div class="footer__color-mode"></div>
+    <div class="footer__bottom-zone">
+      <p class="footer__author">© Road Club 2021</p>
+      <div class="footer__switcher-wrapper">
+        <fieldset class="footer__switcher switcher">
+          <legend class="switcher__legend">Color scheme</legend>
+          <label class="switcher__label switcher__label_light" for="light"></label>
+          <input class="switcher__button" type="radio" name="theme" id="light" value="light">
+          <label class="switcher__label switcher__label_dark" for="dark"></label>
+          <input class="switcher__button" type="radio" name="theme" id="dark" value="dark">
+        </fieldset>
+        <div class="switcher__element"></div>
+      </div>
+    </div>
   </footer>
 
   <script src="scripts/script.js"></script>
