@@ -203,4 +203,51 @@ footerSubmit.addEventListener('click', function() {
   }
 })
 
+// color mode switcher
+
+const switcher = document.querySelector('.switcher');
+const switcherButtons = document.querySelectorAll('.switcher__button');
+const switcherElement = document.querySelector('.switcher__element');
+
+switcherButtons.forEach(function(item) {
+  console.log(item);
+  const switcherLabel = switcher.querySelector(`[for="${item.id}"]`);
+
+  item.addEventListener('change', function() {
+    if (switcherLabel.classList.contains('switcher__label_light')) {
+      switcherElement.style.transform = "translateX(0px)";
+      styleLight.media = "all";
+      styleDark.media = "not all";
+      localStorage.setItem('color-scheme', 'light');
+    } else {
+      switcherElement.style.transform = "translateX(22px)"
+      styleDark.media = "all";
+      styleLight.media = "not all";
+      localStorage.setItem('color-scheme', 'dark');
+    }
+  })
+})
+
+const switcherButtonLight = document.querySelectorAll('.switcher__button[value=light]');
+const switcherButtonDark = document.querySelectorAll('.switcher__button[value=dark]');
+const styleLight = document.querySelector('[media*=prefers-color-scheme][media*=light]');
+const styleDark = document.querySelector('[media*=prefers-color-scheme][media*=dark]');
+const savedStyle = localStorage.getItem('color-scheme');
+
+if (savedStyle === 'light') {
+  styleLight.media = "all";
+  styleDark.media = "not all";
+  switcherButtonLight.checked = true;
+  switcherElement.style.transform = "translateX(0px)"
+} else {
+  styleDark.media = "all";
+  styleLight.media = "not all";
+  localStorage.setItem('color-scheme', 'dark');
+  switcherButtonDark.checked = true;
+  switcherElement.style.transform = "translateX(22px)"
+}
+
+
+
+
 
