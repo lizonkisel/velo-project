@@ -554,20 +554,31 @@ template {
 
 .about__fixed-bike-wrapper {
   position: absolute;
+  top: 0;
+  width: 56.25vw;
+  height: 29.8611111111vw;
+  top: 347px;
+  right: 0;
+  /* position: absolute;
   top: 327px;
   right: 370px;
+
   display: flex;
   justify-content: center;
+
   width: 810px;
-  height: 430px;
+  height: 430px; */
 }
 
 .about__fixed-bike {
   position: -webkit-sticky;
   position: sticky;
-  top: 0px;
-  width: 440px;
-  height: 330px;
+  top: 74px;
+  width: 23.6111111111vw;
+  height: 18.0555555556vw;
+  background-color: #F4F4F4;
+  padding: 20px 50px;
+  border-radius: 10px;
 }
 
 .quote {
@@ -667,7 +678,7 @@ template {
   text-decoration: none;
   width: 50px;
   height: 50px;
-  background: #EBEBEB;
+  background-color: var(--arrow-bg-color);
   border-radius: 50px;
   margin: 0;
   padding: 0;
@@ -679,6 +690,10 @@ template {
 }
 .covers__btn:hover {
   opacity: 0.6;
+}
+
+.covers__btn-image {
+  filter: var(--arrow-color);
 }
 
 .bicycles__header {
@@ -830,6 +845,14 @@ template {
   background-color: var(--bg-color-footer);
 }
 
+.footer__alert {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  font-size: 14px;
+  line-height: 16px;
+  margin-top: 10px;
+}
+
 .footer__bottom-zone {
   display: flex;
   justify-content: space-between;
@@ -843,7 +866,7 @@ template {
   border: none;
   margin: 0;
   padding: 0;
-  background-color: #FFFFFF;
+  background-color: var(--footer-switcher-color);
   width: 44px;
   height: 24px;
   border-radius: 24px;
@@ -863,7 +886,7 @@ template {
 }
 
 .switcher__label_light {
-  background-image: url("../images/light.svg");
+  background-image: var(--icon-sun);
   background-size: 28px;
   width: 28px;
   height: 28px;
@@ -872,7 +895,7 @@ template {
 }
 
 .switcher__label_dark {
-  background-image: url("../images/dark.svg");
+  background-image: var(--icon-moon);
   background-size: 20px;
   width: 20px;
   height: 20px;
@@ -909,20 +932,22 @@ template {
 
 .footer__form {
   margin: 0;
-  margin: 50px 0 100px 0;
+  margin: 50px 0 74px 0;
 }
 
 .footer__input {
   width: 360px;
   height: 50px;
-  border: 1px solid rgba(199, 199, 199, 0.5);
+  border: 1px solid var(--footer-form-border);
   box-sizing: border-box;
   border-radius: 4px;
-  background-color: #f4f4f4;
+  background-color: var(--bg-color-footer);
+  color: var(--font-color);
   padding-left: 20px;
   font-weight: 500;
   font-size: 13px;
   line-height: 28px;
+  cursor: pointer;
 }
 .footer__input::-moz-placeholder {
   opacity: 0.7;
@@ -933,6 +958,32 @@ template {
 .footer__input::placeholder {
   opacity: 0.7;
 }
+.footer__input:hover::-moz-placeholder {
+  opacity: 1;
+}
+.footer__input:hover:-ms-input-placeholder {
+  opacity: 1;
+}
+.footer__input:hover::placeholder {
+  opacity: 1;
+}
+.footer__input:focus {
+  cursor: auto;
+  outline: none;
+  border-color: var(--footer-form-border-active);
+}
+.footer__input:focus::-moz-placeholder {
+  opacity: 0;
+}
+.footer__input:focus:-ms-input-placeholder {
+  opacity: 0;
+}
+.footer__input:focus::placeholder {
+  opacity: 0;
+}
+.footer__input:disabled {
+  cursor: pointer;
+}
 
 .footer__submit {
   font-weight: 500;
@@ -941,11 +992,15 @@ template {
   text-align: right;
   border: none;
   background-color: transparent;
+  color: var(--font-color);
   opacity: 0;
   position: relative;
-  left: -10%;
-  width: 30px;
-  height: 30px;
+  left: -43px;
+  width: 16px;
+  height: 28px;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
 }
 
 .footer__submit:focus {
@@ -956,6 +1011,6 @@ template {
   font-weight: 600;
   font-size: 14px;
   line-height: 20px;
-  color: #CFCFCF;
+  color: var(--footer-author-color);
   margin: 0;
 }/*# sourceMappingURL=index.css.map */
