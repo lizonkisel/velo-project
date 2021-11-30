@@ -1,0 +1,7 @@
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: fit-content(180px) fit-content(112px) 50px 1fr;
+  column-gap: 250px / 1440px * 100vw;
+  row-gap: 50px;
+}
