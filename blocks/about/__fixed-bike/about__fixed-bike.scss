@@ -1,6 +1,9 @@
 .about__fixed-bike {
   position: sticky;
-  top: 0px;
-  width: 440px;
-  height: 330px;
+  top: 74px;
+  width: 340px / 1440px * 100vw;
+  height: 260px / 1440px * 100vw;
+  background-color: #F4F4F4;
+  padding: 20px 50px;
+  border-radius: 10px;
 }

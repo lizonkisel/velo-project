@@ -186,22 +186,34 @@ function toScrollIntoView(element) {
 const footerForm = document.querySelector('.footer__form');
 const footerInput = document.querySelector('.footer__input');
 const footerSubmit = document.querySelector('.footer__submit');
+const footerAlert = document.querySelector('.footer__alert');
 
 footerForm.reset();
 
 footerInput.addEventListener('focus', function() {
   footerSubmit.style.opacity = 1;
+  footerAlert.style.opacity = 0;
 })
 
 footerInput.addEventListener('blur', function() {
   footerSubmit.style.opacity = 0;
 })
 
-footerSubmit.addEventListener('click', function() {
+footerSubmit.addEventListener('click', function(evt) {
+  evt.preventDefault();
   if (footerInput.checkValidity() === true) {
     footerInput.value = "Круто!";
+    footerInput.setAttribute('disabled', 'disabled');
+    setTimeout(clearFooterInput, 2000);
+  } else {
+    footerAlert.style.opacity = 1;
   }
 })
+
+function clearFooterInput() {
+  footerInput.value = "";
+  footerInput.removeAttribute('disabled', 'disabled');
+}
 
 // color mode switcher
 

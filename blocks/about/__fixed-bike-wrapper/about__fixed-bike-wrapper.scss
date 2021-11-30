@@ -1,5 +1,13 @@
 .about__fixed-bike-wrapper {
   position: absolute;
+  top: 0;
+  width: 810px / 1440px * 100vw;
+  height: 430px / 1440px * 100vw;
+
+  top: 347px;
+  right: 0;
+
+  /* position: absolute;
   top: 327px;
   right: 370px;
 
@@ -7,6 +15,5 @@
   justify-content: center;
 
   width: 810px;
-  height: 430px;
-
+  height: 430px; */
 }

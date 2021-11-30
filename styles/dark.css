@@ -3,6 +3,14 @@
   --bg-color: #333333;
   --bg-color-footer: #2F2F2F;
   --thin-font-color: #E5E5E5;
-  --opacity-link: .6;
+  --opacity-link: .65;
   --opacity-thin: .5;
+  --arrow-bg-color: #434343;
+  --arrow-color: invert(1);
+  --footer-form-border: rgba(125, 125, 125, 0.5);
+  --footer-form-border-active: #7D7D7D;
+  --footer-author-color: #565656;
+  --icon-sun: url(../images/icon-sun-dark.svg);
+  --icon-moon: url(../images/icon-moon-dark.svg);
+  --footer-switcher-color: #545454;
 }

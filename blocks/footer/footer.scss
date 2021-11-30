@@ -2,6 +2,15 @@
   background-color: var(--bg-color-footer);
 }
 
+.footer__alert {
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  font-size: 14px;
+  line-height: 16px;
+
+  margin-top: 10px;
+}
+
 .footer__bottom-zone {
   display: flex;
   justify-content: space-between;
@@ -15,7 +24,7 @@
   border: none;
   margin: 0;
   padding: 0;
-  background-color: #FFFFFF;
+  background-color: var(--footer-switcher-color);
   width: 44px;
   height: 24px;
   border-radius: 24px;
@@ -34,7 +43,7 @@
   position: absolute;
 }
 .switcher__label_light {
-  background-image: url("../images/light.svg");
+  background-image: var(--icon-sun);
   background-size: 28px;
   width: 28px;
   height: 28px;
@@ -44,7 +53,7 @@
 }
 
 .switcher__label_dark {
-  background-image: url("../images/dark.svg");
+  background-image: var(--icon-moon);
   background-size: 20px;
   width: 20px;
   height: 20px;
