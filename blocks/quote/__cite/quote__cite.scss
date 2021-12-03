@@ -4,3 +4,10 @@
   justify-content: space-between;
   align-items: flex-start;
 }
+
+
+@media screen and (max-width: 560px) {
+  .quote__cite {
+    row-gap: 40px;
+  }
+}

@@ -1,4 +1,7 @@
 .trainings__description {
+  grid-column: 1/2;
+  grid-row: 2/3;
+
   max-width: 460px;
 
   font-weight: 400;
@@ -8,5 +11,15 @@
   opacity: 0.7;
 
   margin: 0;
-  margin-top: 50px;
+  // margin-top: 50px;
+}
+
+@media screen and (max-width: 560px) {
+  .trainings__description {
+    grid-column: 1;
+    grid-row: 3/4;
+
+    font-size: 12px;
+    line-height: 18px;
+  }
 }

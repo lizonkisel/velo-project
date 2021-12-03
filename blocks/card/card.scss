@@ -1,0 +1,12 @@
+@media screen and (max-width: 560px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+
+    width: 100%;
+
+    background-color: #f4f4f4;
+    filter: drop-shadow(0px 20px 140px rgba(0, 0, 0, 0.06));
+  }
+}

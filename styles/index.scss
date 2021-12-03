@@ -36,6 +36,7 @@
 @import "../blocks/quote/__author/quote__author.scss";
 @import "../blocks/quote/__job/quote__job.scss";
 
+@import "../blocks/covers/covers.scss";
 @import "../blocks/covers/__title/covers__title.scss";
 @import "../blocks/covers/__description/covers__description.scss";
 @import "../blocks/covers/__gallery-wrapper/covers__gallery-wrapper.scss";
@@ -45,6 +46,7 @@
 @import "../blocks/covers/__btn/covers__btn.scss";
 @import "../blocks/covers/__btn-image/covers__btn-image.scss";
 
+@import "../blocks/bicycles/bicycles.scss";
 @import "../blocks/bicycles/__header/bicycles__header.scss";
 @import "../blocks/bicycles/__title/bicycles__title.scss";
 @import "../blocks/bicycles/__menu/bicycles__menu.scss";
@@ -54,6 +56,7 @@
 @import "../blocks/bicycles/__menu-item/bicycles__menu-item.scss";
 @import "../blocks/bicycles/__gallery/bicycles__gallery.scss";
 
+@import "../blocks/card/card.scss";
 @import "../blocks/card/__image/card__image.scss";
 @import "../blocks/card/__name/card__name.scss";
 
@@ -64,6 +67,8 @@
 @import "../blocks/trainings/__description/trainings__description.scss";
 @import "../blocks/trainings/__link/trainings__link.scss";
 @import "../blocks/trainings/__image/trainings__image.scss";
+
+@import "../blocks/pop-up/pop-up.scss";
 
 @import "../blocks/footer/footer.scss";
 @import "../blocks/footer/__title/footer__title.scss";

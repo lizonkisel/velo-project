@@ -4,3 +4,9 @@
 
   object-fit: contain;
 }
+
+@media screen and (max-width: 560px) {
+  .quote__image {
+    width: 100%;
+  }
+}

@@ -1,0 +1,33 @@
+.bicycles__drop-down-menu {
+  display: none;
+}
+
+@media screen and (max-width: 560px) {
+  .bicycles__drop-down-menu {
+    display: block;
+  }
+}
+
+.bicycles__pagination {
+  position: static;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 560px) {
+  .bicycles__gallery-desktop {
+    display: none;
+  }
+}
+
+.bicycles__gallery-mobile {
+  display: none;
+
+  width: 100%;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 560px) {
+  .bicycles__gallery-mobile {
+    display: block;
+  }
+}

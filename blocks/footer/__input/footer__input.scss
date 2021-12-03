@@ -36,3 +36,9 @@
     cursor: pointer;
   }
 }
+
+@media screen and (max-width: 560px) {
+  .footer__input {
+    width: 284px;
+  }
+}

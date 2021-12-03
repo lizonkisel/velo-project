@@ -60,23 +60,40 @@ const bicyclesArray = [
 ]
 
 const bicyclesGallery = document.querySelector(".bicycles__gallery");
+const bicyclesGalleryDesk = document.querySelector(".bicycles__gallery-desk");
+const bicyclesGalleryMob = document.querySelector(".bicycles__gallery-mob");
 const bicyclesMenu = document.querySelector(".bicycles__menu");
 const cardTemplate = document.querySelector("#card").content;
 
+
+
 function deleteCards() {
-  while (bicyclesGallery.hasChildNodes()) {
-    bicyclesGallery.removeChild(bicyclesGallery.firstChild);
+  while (activeGallery.hasChildNodes()) {
+    activeGallery.removeChild(activeGallery.firstChild);
+    console.log("2");
   }
 }
 
 
+
 bicyclesMenu.addEventListener("click", function (event) {
   const button = event.target;
-  if (!button.classList.contains('bicycles__menu-item')) {
-    return;
+
+  if (page.offsetWidth <= 560) {
+    activeGallery = bicyclesGalleryMob;
+    if (!button.classList.contains('bicycles__drop-down-menu-item')) {
+      return;
+    }
+  } else {
+    activeGallery = bicyclesGalleryDesk;
+    if (!button.classList.contains('bicycles__menu-item')) {
+      return;
+    }
+    makeLabelactive(button);
   }
+
   deleteCards();
-  makeLabelactive(button);
+
   const buttonName = button.value;
   const neededObject = bicyclesArray.find(function (item) {
     return item.categoryName === buttonName;
@@ -93,9 +110,48 @@ bicyclesMenu.addEventListener("click", function (event) {
     cardElement.querySelector('.card__name').textContent = neededName;
     cardElement.querySelector('.card__name').href = neededLink;
 
+    if (activeGallery === bicyclesGalleryMob) {
+      cardElement.classList.add('swiper-slide')
+    }
+
+    activeGallery.append(cardElement);
+    /* activeGallery.style.transform = "translate3d(0px, 0px, 0px)"; */
+  })
+  console.log(activeGallery);
+});
+
+// Весь вот этот кусок надо как-то оптимизировать. Возможно, соединить с предыдущим
+
+/* bicyclesMenu.addEventListener("click", function (event) {
+  const button = event.target;
+  if (!button.classList.contains('bicycles__drop-down-menu-item')) {
+    return;
+  }
+  deleteCards(); */
+  /* makeLabelactive(button); */
+  /* const buttonName = button.value;
+  const neededObject = bicyclesArray.find(function (item) {
+    return item.categoryName === buttonName;
+  });
+
+  const neededArray = Object.entries(neededObject).slice(1);
+  neededArray.forEach(function(item) {;
+    const neededImageUrl = item[1].url;
+    const neededName = item[1].name;
+    const neededLink = item[1].link;
+
+    const cardElement = cardTemplate.querySelector(".card").cloneNode(true);
+    cardElement.querySelector('.card__image').src = neededImageUrl;
+    cardElement.querySelector('.card__name').textContent = neededName;
+    cardElement.querySelector('.card__name').href = neededLink;
+
+    if (page.offsetWidth <= 560) {
+      cardElement.classList.add('swiper-slide')
+    }
+
     bicyclesGallery.append(cardElement);
   })
-});
+}); */
 
 function makeLabelactive(button) {
   const menuLabels = bicyclesMenu.querySelectorAll('.bicycles__menu-label');
@@ -108,6 +164,69 @@ function makeLabelactive(button) {
 
 bicyclesMenu.querySelector('.bicycles__menu-item').checked = true;
 
+// Bicycle swiper
+const bicyclesGalleryWrapper = document.querySelector('.bicycles__gallery-wrapper');
+const page = document.querySelector('.page');
+
+const cards = document.querySelectorAll('.card');
+
+const bicyclesSwiper = new Swiper('.bicycles__gallery-mobile', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: false,
+  slidesPerView: 1,
+  spaceBetween: 10,
+  speed: 400,
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    clickable: true,
+  },
+});
+
+/* if (page.offsetWidth <= 560) {
+  bicyclesGalleryWrapper.classList.add('swiper');
+  bicyclesGallery.classList.add('swiper-wrapper');
+  const bicyclesSwiper = new Swiper('.bicycles__gallery-wrapper', {
+    // Optional parameters
+    breakpoints: {
+      320: {
+        direction: 'horizontal',
+        loop: false,
+        slidesPerView: 1,
+        spaceBetween: 20,
+        speed: 400
+      }
+    }
+  });
+  cards.forEach(function(card) {
+    card.classList.add('swiper-slide');
+  });
+} else {
+  bicyclesGalleryWrapper.classList.remove('swiper');
+  bicyclesGallery.classList.remove('swiper-wrapper');
+  cards.forEach(function(card) {
+    card.classList.remove('swiper-slide');
+  });
+}
+
+window.addEventListener("resize", function() {
+  if (page.offsetWidth <= 560) {
+    bicyclesGalleryWrapper.classList.add('swiper');
+    bicyclesGallery.classList.add('swiper-wrapper');
+
+    cards.forEach(function(card) {
+      card.classList.add('swiper-slide');
+    });
+  } else {
+    bicyclesGalleryWrapper.classList.remove('swiper');
+    bicyclesGallery.classList.remove('swiper-wrapper');
+    cards.forEach(function(card) {
+      card.classList.remove('swiper-slide');
+    });
+  }
+}) */
+
 
 // Swiper
 
@@ -118,6 +237,14 @@ const swiper = new Swiper('.covers__gallery-wrapper', {
   slidesPerView: 2,
   spaceBetween: 40,
   speed: 400,
+  breakpoints: {
+    320: {
+      slidesPerView: 1
+    },
+    560: {
+      slidesPerView: 2
+    }
+  },
 
   // Navigation arrows
   navigation: {
@@ -127,23 +254,40 @@ const swiper = new Swiper('.covers__gallery-wrapper', {
 
 });
 
+  // Стили свайпера для мобильных
+
+/* document.addEventListener("DOMContentLoaded", function() {
+  console.log(page.offsetWidth);
+  if (page.offsetWidth <= 560) {
+    swiper.allowSlidePrev = false;
+    swiper.slidesPerView = 1;
+    console.log(swiper.slidesPerView);
+  }
+}) */
+
+console.log(swiper.slidesPerView);
+
 const coversTitle = document.querySelector('.covers__title');
 const coversDescription = document.querySelector('.covers__description');
+const coversIcon = document.querySelector('.covers__icon-cover');
 
 const coversArray = [
   {
     title: "Шоссе",
-    description: "На шоссейном велосипеде можно ездить по асфальту на разных градиентах: будь то горы или равнины. Гонки проходят в командном пелотоне, но тренироваться можно и самостоятельно."
+    description: "На шоссейном велосипеде можно ездить по асфальту на разных градиентах: будь то горы или равнины. Гонки проходят в командном пелотоне, но тренироваться можно и самостоятельно.",
+    src: "./images/icon-shosse.svg"
   },
 
   {
     title: "Грэвел",
-    description: "Грэвел похож на шоссейный велосипед, но конструкция рамы немного отличается, и на нём стоят более широкие покрышки, всё для того чтобы проехать по лёгкому бездорожью."
+    description: "Грэвел похож на шоссейный велосипед, но конструкция рамы немного отличается, и на нём стоят более широкие покрышки, всё для того чтобы проехать по лёгкому бездорожью.",
+    src: "./images/icon-gravel.svg"
   },
 
   {
     title: "ТТ",
-    description: "ТТ — это велосипед для триатлона или раздельного старта, гооняют на таком велике только по равнинному асфальту, велик очень быстрые и аэродинамичный."
+    description: "ТТ — это велосипед для триатлона или раздельного старта, гооняют на таком велике только по равнинному асфальту, велик очень быстрые и аэродинамичный.",
+    src: "./images/icon-TT.svg"
   }
 ];
 
@@ -152,6 +296,7 @@ swiper.on('slideChange', function () {
 
   coversTitle.textContent = coversArray[currentIndex].title;
   coversDescription.textContent = coversArray[currentIndex].description;
+  coversIcon.src = coversArray[currentIndex].src;
 });
 
 
@@ -259,7 +404,17 @@ if (savedStyle === 'light') {
   switcherElement.style.transform = "translateX(22px)"
 }
 
+// Pop-up menu
 
+const burgerMenu = document.querySelector(".header__burger-menu");
+const popup = document.querySelector(".pop-up");
+burgerMenu.addEventListener("click", function() {
+  popup.classList.add("pop-up_opened");
+})
+const popupButtonClose = document.querySelector(".pop-up__button-close");
+popupButtonClose.addEventListener("click", function() {
+  popup.classList.remove("pop-up_opened");
+})
 
 
 

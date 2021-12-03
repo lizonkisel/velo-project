@@ -6,3 +6,12 @@
   margin: 0;
   margin-bottom: 6px;
 }
+
+@media screen and (max-width: 560px) {
+  .quote__author {
+    font-size: 14px;
+    line-height: 22px;
+
+    margin-bottom: 4px;
+  }
+}
