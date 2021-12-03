@@ -1,4 +1,4 @@
-.about__link {
+.about__button {
   grid-column: 1/2;
   grid-row: 3/4;
 
@@ -9,6 +9,7 @@
   width: 180px;
   height: 50px;
   background: #24B47E;
+  border: none;
   border-radius: 4px;
   padding: 16px 10px;
 
@@ -44,7 +45,7 @@
 
 
 @media screen and (max-width: 560px) {
-  .about__link {
+  .about__button {
     grid-column: 1;
     grid-row: 4/5;
 

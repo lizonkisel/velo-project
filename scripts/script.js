@@ -326,6 +326,14 @@ function toScrollIntoView(element) {
   element.scrollIntoView({block: "start", behavior: "smooth"})
 };
 
+// about scroll into view
+
+const aboutButton = document.querySelector('.about__button');
+
+aboutButton.addEventListener('click', function() {
+  toScrollIntoView(covers);
+});
+
 // footer form
 
 const footerForm = document.querySelector('.footer__form');
@@ -416,5 +424,22 @@ popupButtonClose.addEventListener("click", function() {
   popup.classList.remove("pop-up_opened");
 })
 
+const popupMenuCovers = document.querySelector('.pop-up__link_covers');
+const popupMenuBicycles = document.querySelector('.pop-up__link_bicycles');
+const popupMenuTrainings = document.querySelector('.pop-up__link_trainings');
 
+popupMenuCovers.addEventListener('click', function() {
+  toScrollIntoView(covers);
+  popup.classList.remove("pop-up_opened");
+});
+
+popupMenuBicycles.addEventListener('click', function() {
+  toScrollIntoView(bicycles);
+  popup.classList.remove("pop-up_opened");
+});
+
+popupMenuTrainings.addEventListener('click', function() {
+  toScrollIntoView(trainings);
+  popup.classList.remove("pop-up_opened");
+});
 
