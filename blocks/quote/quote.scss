@@ -2,3 +2,10 @@
   display: flex;
   column-gap: 80px;
 }
+
+@media screen and (max-width: 560px) {
+  .quote {
+    flex-direction: column;
+    row-gap: 40px;
+  }
+}

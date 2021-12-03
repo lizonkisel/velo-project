@@ -22,3 +22,11 @@
 .footer__submit:focus {
   display: inline;
 }
+
+@media screen and (max-width: 560px) {
+  .footer__submit {
+    position: absolute;
+    top: 11px;
+    left: 246px;
+  }
+}

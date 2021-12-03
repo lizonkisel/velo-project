@@ -7,3 +7,12 @@
   padding: 20px 50px;
   border-radius: 10px;
 }
+
+@media screen and (max-width: 560px) {
+  .about__fixed-bike {
+    width: 181px / 320px * 100vw;
+    height: 139px / 320px * 100vw;
+
+    padding: 10px 26px;
+  }
+}

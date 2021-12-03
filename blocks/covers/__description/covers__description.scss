@@ -1,4 +1,7 @@
 .covers__description {
+  grid-column: 1;
+  grid-row: 2/3;
+
   width: 100%;
   overflow: hidden;
   font-weight: 400;
@@ -10,5 +13,18 @@
   max-width: 460px;
 
   margin: 0;
-  margin: 50px 0 80px 0;
+  // margin: 50px 0 80px 0;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 560px) {
+  .covers__description {
+    grid-column: 1;
+    grid-row: 3/4;
+
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0;
+    // max-width: 284px;
+  }
 }

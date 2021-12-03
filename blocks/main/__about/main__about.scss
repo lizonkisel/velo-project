@@ -2,3 +2,9 @@
   padding: 20px 0 0 120px;
   position: relative;
 }
+
+@media screen and (max-width: 560px) {
+  .main__about {
+    padding: 40px 18px;
+  }
+}

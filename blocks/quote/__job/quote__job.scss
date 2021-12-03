@@ -6,3 +6,12 @@
 
   margin: 0;
 }
+
+@media screen and (max-width: 560px) {
+  .quote__job {
+    font-size: 23px;
+    line-height: 29px;
+    font-size: 10px;
+    line-height: 16px;
+  }
+}

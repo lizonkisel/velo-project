@@ -1,5 +1,18 @@
 .trainings__image {
-  width: 560px / 1440px * 100vw;
-  max-width: 560px;
+  grid-column: 2/3;
+  grid-row: 1/4;
+  align-self: center;
+
+  width: 580px / 1440px * 100vw;
+  max-width: 580px;
   object-fit: contain;
+}
+
+
+@media screen and (max-width: 560px) {
+  .trainings__image {
+    grid-column: 1;
+    grid-row: 2/3;
+    width: 100%;
+  }
 }

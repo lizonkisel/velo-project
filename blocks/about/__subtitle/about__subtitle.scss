@@ -10,3 +10,14 @@
 
   margin: 0;
 }
+
+
+@media screen and (max-width: 560px) {
+  .about__subtitle {
+    grid-column: 1;
+    grid-row: 3/4;
+
+    font-size: 12px;
+    line-height: 18px;
+  }
+}

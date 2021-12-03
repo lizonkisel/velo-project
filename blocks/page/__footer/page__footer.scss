@@ -4,3 +4,9 @@
   padding: 80px 120px 60px 120px;
   box-sizing: border-box;
 }
+
+@media screen and (max-width: 560px) {
+  .page__footer {
+    padding: 60px 18px 16px 18px;
+  }
+}

@@ -2,3 +2,9 @@
   padding: 60px 120px;
   box-sizing: border-box;
 }
+
+@media screen and (max-width: 560px) {
+  .main__bicycles {
+    padding: 40px 18px;
+  }
+}

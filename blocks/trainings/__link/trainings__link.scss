@@ -19,3 +19,10 @@
     margin-right: 0;
   }
 }
+
+@media screen and (max-width: 560px) {
+  .trainings__link {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}

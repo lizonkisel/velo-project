@@ -3,3 +3,19 @@
   display: flex;
   justify-content: end;
 }
+
+.header__burger-menu {
+  display: none;
+  border: none;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+
+  filter: var(--arrow-color);
+}
+
+@media screen and (max-width: 560px) {
+  .header__burger-menu {
+    display: block;
+  }
+}

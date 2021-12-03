@@ -2,3 +2,10 @@
   display: flex;
   align-items: center;
 }
+
+
+@media screen and (max-width: 560px) {
+  .header__menu {
+    display: none;
+  }
+}

@@ -5,3 +5,10 @@
   letter-spacing: -0.5px;
   margin: 0;
 }
+
+@media screen and (max-width: 560px) {
+  .bicycles__title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}

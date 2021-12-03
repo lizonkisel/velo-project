@@ -12,3 +12,17 @@
 
   }
 }
+
+@media screen and (max-width: 560px) {
+  .card__image {
+    padding: 0;
+    margin: 15px;
+    width: auto;
+    filter: none;
+
+    &:hover {
+      filter: none;
+
+    }
+  }
+}
