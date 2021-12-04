@@ -9,7 +9,8 @@
 
 @import "../blocks/header/header.scss";
 @import "../blocks/header/__menu/header__menu.scss";
-@import "../blocks/header/__link/header__link.scss";
+@import "../blocks/header/__button/header__button.scss";
+@import "../blocks/header/__burger-menu/header__burger-menu.scss";
 
 @import "../blocks/main/__about/main__about.scss";
 @import "../blocks/main/__quote/main__quote.scss";
@@ -20,7 +21,7 @@
 
 @import "../blocks/about/about.scss";
 @import "../blocks/about/__title/about__title.scss";
-@import "../blocks/about/__subtitle/about__subtitle.scss";
+@import "../blocks/about/__description/about__description.scss";
 @import "../blocks/about/__button/about__button.scss";
 @import "../blocks/about/__bike-name-wrapper/about__bike-name-wrapper.scss";
 @import "../blocks/about/__bike-name/about__bike-name.scss";
@@ -39,6 +40,7 @@
 @import "../blocks/covers/covers.scss";
 @import "../blocks/covers/__title/covers__title.scss";
 @import "../blocks/covers/__description/covers__description.scss";
+@import "../blocks/covers/__icon-cover/covers__icon-cover.scss";
 @import "../blocks/covers/__gallery-wrapper/covers__gallery-wrapper.scss";
 @import "../blocks/covers/__slide/covers__slide.scss";
 @import "../blocks/covers/__image/covers__image.scss";
@@ -50,7 +52,6 @@
 @import "../blocks/bicycles/__header/bicycles__header.scss";
 @import "../blocks/bicycles/__title/bicycles__title.scss";
 @import "../blocks/bicycles/__menu/bicycles__menu.scss";
-@import "../blocks/bicycles/__form/bicycles__form.scss";
 @import "../blocks/bicycles/__menu-label/bicycles__menu-label.scss";
 @import "../blocks/bicycles/__menu-label/_active/bicycles__menu-label_active.scss";
 @import "../blocks/bicycles/__menu-item/bicycles__menu-item.scss";
@@ -65,14 +66,35 @@
 @import "../blocks/trainings/__info/trainings__info.scss";
 @import "../blocks/trainings/__title/trainings__title.scss";
 @import "../blocks/trainings/__description/trainings__description.scss";
+@import "../blocks/trainings/__links/trainings__links.scss";
 @import "../blocks/trainings/__link/trainings__link.scss";
 @import "../blocks/trainings/__image/trainings__image.scss";
 
 @import "../blocks/pop-up/pop-up.scss";
+@import "../blocks/pop-up/_opened/pop-up_opened.scss";
+@import "../blocks/pop-up/__button-close/pop-up__button-close.scss";
+@import "../blocks/pop-up/__content/pop-up__content.scss";
+@import "../blocks/pop-up/__menu/pop-up__menu.scss";
+@import "../blocks/pop-up/__button/pop-up__button.scss";
+@import "../blocks/pop-up/__switcher-wrapper/pop-up__switcher-wrapper.scss";
+
 
 @import "../blocks/footer/footer.scss";
 @import "../blocks/footer/__title/footer__title.scss";
 @import "../blocks/footer/__form/footer__form.scss";
 @import "../blocks/footer/__input/footer__input.scss";
 @import "../blocks/footer/__submit/footer__submit.scss";
+@import "../blocks/footer/__alert/footer__alert.scss";
+@import "../blocks/footer/__bottom-zone/footer__bottom-zone.scss";
 @import "../blocks/footer/__author/footer__author.scss";
+@import "../blocks/footer/__switcher-wrapper/footer__switcher-wrapper.scss";
+@import "../blocks/footer/__logo/footer__logo.scss";
+
+@import "../blocks/switcher/switcher.scss";
+@import "../blocks/switcher/__legend/switcher__legend.scss";
+@import "../blocks/switcher/__label/switcher__label.scss";
+@import "../blocks/switcher/__label/_light/switcher__label_light.scss";
+@import "../blocks/switcher/__label/_dark/switcher__label_dark.scss";
+@import "../blocks/switcher/__button/switcher__button.scss";
+@import "../blocks/switcher/__element/switcher__element.scss";
+
