@@ -2,27 +2,18 @@
   object-fit: contain;
   width: 100%;
   background-color: #f4f4f4;
-  padding: 20px;
+  border-radius: 40px;
   box-sizing: border-box;
-  filter: drop-shadow(0px 20px 140px rgba(0, 0, 0, 0.06));
-  transition: filter .3s ease-in-out;
-
-  &:hover {
-    filter: drop-shadow(0px 20px 140px rgba(0, 0, 0, 0.11));
-
-  }
 }
 
 @media screen and (max-width: 560px) {
   .card__image {
     padding: 0;
-    margin: 15px;
-    width: auto;
+    // margin: 15px;
     filter: none;
 
     &:hover {
       filter: none;
-
     }
   }
 }

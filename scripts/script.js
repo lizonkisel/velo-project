@@ -70,7 +70,6 @@ const cardTemplate = document.querySelector("#card").content;
 function deleteCards() {
   while (activeGallery.hasChildNodes()) {
     activeGallery.removeChild(activeGallery.firstChild);
-    console.log("2");
   }
 }
 
@@ -107,6 +106,7 @@ bicyclesMenu.addEventListener("click", function (event) {
 
     const cardElement = cardTemplate.querySelector(".card").cloneNode(true);
     cardElement.querySelector('.card__image').src = neededImageUrl;
+    cardElement.querySelector('.card__image').alt = neededName;
     cardElement.querySelector('.card__name').textContent = neededName;
     cardElement.querySelector('.card__name').href = neededLink;
 
@@ -248,8 +248,8 @@ const swiper = new Swiper('.covers__gallery-wrapper', {
 
   // Navigation arrows
   navigation: {
-    nextEl: '.covers__next',
-    prevEl: '.covers__prev',
+    nextEl: '.covers__btn_next',
+    prevEl: '.covers__btn_prev',
   },
 
 });
@@ -302,9 +302,9 @@ swiper.on('slideChange', function () {
 
 // Header scrollIntoView
 
-const headerMenuCovers = document.querySelector('.header__link_covers');
-const headerMenuBicycles = document.querySelector('.header__link_bicycles');
-const headerMenuTrainings = document.querySelector('.header__link_trainings');
+const headerMenuCovers = document.querySelector('.header__button_section_covers');
+const headerMenuBicycles = document.querySelector('.header__button_section_bicycles');
+const headerMenuTrainings = document.querySelector('.header__button_section_trainings');
 
 const covers = document.querySelector('.covers');
 const bicycles = document.querySelector('.bicycles');
@@ -412,6 +412,48 @@ if (savedStyle === 'light') {
   switcherElement.style.transform = "translateX(22px)"
 }
 
+/* const switcher = document.querySelector('.switcher');
+const switcherButtons = document.querySelectorAll('.switcher__button');
+const switcherElement = document.querySelector('.switcher__element');
+
+switcherButtons.forEach(function(item) {
+  console.log(item);
+  const switcherLabel = switcher.querySelector(`[for="${item.id}"]`);
+
+  item.addEventListener('change', function() {
+    if (switcherLabel.classList.contains('switcher__label_light')) {
+      switcherElement.style.transform = "translateX(0px)";
+      styleLight.media = "all";
+      styleDark.media = "not all";
+      localStorage.setItem('color-scheme', 'light');
+    } else {
+      switcherElement.style.transform = "translateX(22px)"
+      styleDark.media = "all";
+      styleLight.media = "not all";
+      localStorage.setItem('color-scheme', 'dark');
+    }
+  })
+})
+
+const switcherButtonLight = document.querySelectorAll('.switcher__button[value=light]');
+const switcherButtonDark = document.querySelectorAll('.switcher__button[value=dark]');
+const styleLight = document.querySelector('[media*=prefers-color-scheme][media*=light]');
+const styleDark = document.querySelector('[media*=prefers-color-scheme][media*=dark]');
+const savedStyle = localStorage.getItem('color-scheme');
+
+if (savedStyle === 'light') {
+  styleLight.media = "all";
+  styleDark.media = "not all";
+  switcherButtonLight.checked = true;
+  switcherElement.style.transform = "translateX(0px)"
+} else {
+  styleDark.media = "all";
+  styleLight.media = "not all";
+  localStorage.setItem('color-scheme', 'dark');
+  switcherButtonDark.checked = true;
+  switcherElement.style.transform = "translateX(22px)"
+} */
+
 // Pop-up menu
 
 const burgerMenu = document.querySelector(".header__burger-menu");
@@ -424,9 +466,9 @@ popupButtonClose.addEventListener("click", function() {
   popup.classList.remove("pop-up_opened");
 })
 
-const popupMenuCovers = document.querySelector('.pop-up__link_covers');
-const popupMenuBicycles = document.querySelector('.pop-up__link_bicycles');
-const popupMenuTrainings = document.querySelector('.pop-up__link_trainings');
+const popupMenuCovers = document.querySelector('.pop-up__button_section_covers');
+const popupMenuBicycles = document.querySelector('.pop-up__button_section_bicycles');
+const popupMenuTrainings = document.querySelector('.pop-up__button_section_trainings');
 
 popupMenuCovers.addEventListener('click', function() {
   toScrollIntoView(covers);

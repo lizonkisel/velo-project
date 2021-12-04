@@ -1,0 +1,12 @@
+.trainings__links {
+  grid-column: 1/2;
+  grid-row: 3/4;
+  align-self: end;
+}
+
+@media screen and (max-width: 560px) {
+  .trainings__links {
+    grid-column: 1;
+    grid-row: 4/5;
+  }
+}

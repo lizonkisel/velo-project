@@ -1,4 +1,4 @@
-.about__subtitle {
+.about__description {
   grid-column: 1/2;
   grid-row: 2/3;
 
@@ -13,7 +13,7 @@
 
 
 @media screen and (max-width: 560px) {
-  .about__subtitle {
+  .about__description {
     grid-column: 1;
     grid-row: 3/4;
 

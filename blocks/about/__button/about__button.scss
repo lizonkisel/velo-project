@@ -21,6 +21,10 @@
   text-align: center;
   letter-spacing: 1px;
 
+  &:hover {
+    cursor: pointer;
+  }
+
   &::after {
     content: "";
     border-radius: 4px;

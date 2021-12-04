@@ -1,0 +1,9 @@
+.footer__switcher-wrapper {
+  position: relative;
+}
+
+@media screen and (max-width: 560px) {
+  .footer__switcher-wrapper {
+    display: none;
+  }
+}

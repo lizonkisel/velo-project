@@ -1,0 +1,21 @@
+.covers__icon-cover {
+  grid-column: 1;
+  grid-row: 3/4;
+  align-self: end;
+
+  z-index: 2;
+
+  width: 100px;
+  height: 40px;
+  margin-bottom: 16px;
+}
+
+@media screen and (max-width: 560px) {
+  .covers__icon-cover {
+    grid-row: 2/3;
+
+    width: 70px;
+    height: 28px;
+    margin-bottom: 14px;
+  }
+}
