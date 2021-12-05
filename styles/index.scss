@@ -1,6 +1,6 @@
 @import "../vendor/normalize";
 @import "../vendor/fonts/fonts";
-@import "../blocks/variables.scss";
+@import "../styles/variables.scss";
 
 @import "../blocks/page/page.scss";
 @import "../blocks/page/__header/page__header.scss";
@@ -97,4 +97,3 @@
 @import "../blocks/switcher/__label/_dark/switcher__label_dark.scss";
 @import "../blocks/switcher/__button/switcher__button.scss";
 @import "../blocks/switcher/__element/switcher__element.scss";
-
