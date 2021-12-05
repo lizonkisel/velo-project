@@ -117,41 +117,8 @@ bicyclesMenu.addEventListener("click", function (event) {
     activeGallery.append(cardElement);
     /* activeGallery.style.transform = "translate3d(0px, 0px, 0px)"; */
   })
-  console.log(activeGallery);
 });
 
-// Весь вот этот кусок надо как-то оптимизировать. Возможно, соединить с предыдущим
-
-/* bicyclesMenu.addEventListener("click", function (event) {
-  const button = event.target;
-  if (!button.classList.contains('bicycles__drop-down-menu-item')) {
-    return;
-  }
-  deleteCards(); */
-  /* makeLabelactive(button); */
-  /* const buttonName = button.value;
-  const neededObject = bicyclesArray.find(function (item) {
-    return item.categoryName === buttonName;
-  });
-
-  const neededArray = Object.entries(neededObject).slice(1);
-  neededArray.forEach(function(item) {;
-    const neededImageUrl = item[1].url;
-    const neededName = item[1].name;
-    const neededLink = item[1].link;
-
-    const cardElement = cardTemplate.querySelector(".card").cloneNode(true);
-    cardElement.querySelector('.card__image').src = neededImageUrl;
-    cardElement.querySelector('.card__name').textContent = neededName;
-    cardElement.querySelector('.card__name').href = neededLink;
-
-    if (page.offsetWidth <= 560) {
-      cardElement.classList.add('swiper-slide')
-    }
-
-    bicyclesGallery.append(cardElement);
-  })
-}); */
 
 function makeLabelactive(button) {
   const menuLabels = bicyclesMenu.querySelectorAll('.bicycles__menu-label');
@@ -184,50 +151,6 @@ const bicyclesSwiper = new Swiper('.bicycles__gallery-mobile', {
   },
 });
 
-/* if (page.offsetWidth <= 560) {
-  bicyclesGalleryWrapper.classList.add('swiper');
-  bicyclesGallery.classList.add('swiper-wrapper');
-  const bicyclesSwiper = new Swiper('.bicycles__gallery-wrapper', {
-    // Optional parameters
-    breakpoints: {
-      320: {
-        direction: 'horizontal',
-        loop: false,
-        slidesPerView: 1,
-        spaceBetween: 20,
-        speed: 400
-      }
-    }
-  });
-  cards.forEach(function(card) {
-    card.classList.add('swiper-slide');
-  });
-} else {
-  bicyclesGalleryWrapper.classList.remove('swiper');
-  bicyclesGallery.classList.remove('swiper-wrapper');
-  cards.forEach(function(card) {
-    card.classList.remove('swiper-slide');
-  });
-}
-
-window.addEventListener("resize", function() {
-  if (page.offsetWidth <= 560) {
-    bicyclesGalleryWrapper.classList.add('swiper');
-    bicyclesGallery.classList.add('swiper-wrapper');
-
-    cards.forEach(function(card) {
-      card.classList.add('swiper-slide');
-    });
-  } else {
-    bicyclesGalleryWrapper.classList.remove('swiper');
-    bicyclesGallery.classList.remove('swiper-wrapper');
-    cards.forEach(function(card) {
-      card.classList.remove('swiper-slide');
-    });
-  }
-}) */
-
-
 // Swiper
 
 const swiper = new Swiper('.covers__gallery-wrapper', {
@@ -255,17 +178,6 @@ const swiper = new Swiper('.covers__gallery-wrapper', {
 });
 
   // Стили свайпера для мобильных
-
-/* document.addEventListener("DOMContentLoaded", function() {
-  console.log(page.offsetWidth);
-  if (page.offsetWidth <= 560) {
-    swiper.allowSlidePrev = false;
-    swiper.slidesPerView = 1;
-    console.log(swiper.slidesPerView);
-  }
-}) */
-
-console.log(swiper.slidesPerView);
 
 const coversTitle = document.querySelector('.covers__title');
 const coversDescription = document.querySelector('.covers__description');
@@ -375,7 +287,6 @@ const switcherButtons = document.querySelectorAll('.switcher__button');
 const switcherElement = document.querySelector('.switcher__element');
 
 switcherButtons.forEach(function(item) {
-  console.log(item);
   const switcherLabel = switcher.querySelector(`[for="${item.id}"]`);
 
   item.addEventListener('change', function() {
@@ -411,48 +322,6 @@ if (savedStyle === 'light') {
   switcherButtonDark.checked = true;
   switcherElement.style.transform = "translateX(22px)"
 }
-
-/* const switcher = document.querySelector('.switcher');
-const switcherButtons = document.querySelectorAll('.switcher__button');
-const switcherElement = document.querySelector('.switcher__element');
-
-switcherButtons.forEach(function(item) {
-  console.log(item);
-  const switcherLabel = switcher.querySelector(`[for="${item.id}"]`);
-
-  item.addEventListener('change', function() {
-    if (switcherLabel.classList.contains('switcher__label_light')) {
-      switcherElement.style.transform = "translateX(0px)";
-      styleLight.media = "all";
-      styleDark.media = "not all";
-      localStorage.setItem('color-scheme', 'light');
-    } else {
-      switcherElement.style.transform = "translateX(22px)"
-      styleDark.media = "all";
-      styleLight.media = "not all";
-      localStorage.setItem('color-scheme', 'dark');
-    }
-  })
-})
-
-const switcherButtonLight = document.querySelectorAll('.switcher__button[value=light]');
-const switcherButtonDark = document.querySelectorAll('.switcher__button[value=dark]');
-const styleLight = document.querySelector('[media*=prefers-color-scheme][media*=light]');
-const styleDark = document.querySelector('[media*=prefers-color-scheme][media*=dark]');
-const savedStyle = localStorage.getItem('color-scheme');
-
-if (savedStyle === 'light') {
-  styleLight.media = "all";
-  styleDark.media = "not all";
-  switcherButtonLight.checked = true;
-  switcherElement.style.transform = "translateX(0px)"
-} else {
-  styleDark.media = "all";
-  styleLight.media = "not all";
-  localStorage.setItem('color-scheme', 'dark');
-  switcherButtonDark.checked = true;
-  switcherElement.style.transform = "translateX(22px)"
-} */
 
 // Pop-up menu
 

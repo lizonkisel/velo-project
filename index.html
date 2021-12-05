@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
@@ -15,11 +17,11 @@
 
   <header class="header page__header">
     <nav class="header__menu">
-      <button class="header__button header__button_section_covers">Покрытия и градиенты</button>
-      <button class="header__button header__button_section_bicycles">Велосипеды</button>
-      <button class="header__button header__button_section_trainings">Тренировки</button>
+      <button class="header__button header__button_section_covers" type="button">Покрытия и градиенты</button>
+      <button class="header__button header__button_section_bicycles" type="button">Велосипеды</button>
+      <button class="header__button header__button_section_trainings" type="button">Тренировки</button>
     </nav>
-    <button class="header__burger-menu" type="">
+    <button class="header__burger-menu" type="button">
       <img class="header__burger-menu-icon" src="./images/burger-menu.svg" alt="Бургерное меню">
     </button>
   </header>
@@ -27,13 +29,13 @@
   <main class="main page__main">
 
     <section class="about main__about">
-      <h1 class="about__title">Шоссе, ТТ и&nbspГрэвел</h1>
+      <h1 class="about__title">Шоссе, ТТ и&nbsp;Грэвел</h1>
       <p class="about__description">Триатлонные старты,
         горные серпантины или грейвел заезды по живописным
         маршрутам – нужно только определиться с выбором велосипеда
         и отправиться в путь.
       </p>
-      <button type="" class="about__button">Подробнее</button>
+      <button class="about__button" type="button">Подробнее</button>
       <div class="about__bike-name-wrapper">
         <p class="about__bike-name">Cannondale Systemsix</p>
         <div class="about__line"></div>
@@ -47,7 +49,7 @@
     <section class="quote main__quote">
       <img class="quote__image" src="./images/houses_in_the_forest.jpg" alt="Дома в лесу">
       <div class="quote__cite">
-        <p class="quote__text">«Катайся много или мало, долго или коротко, как хочешь - но катайся»</p>
+        <h3 class="quote__text">«Катайся много или мало, долго или коротко, как хочешь - но катайся»</h3>
         <div class="quote__about-author">
           <p class="quote__author">Эдди Меркс</p>
           <p class="quote__job">Велогонщик</p>
@@ -97,10 +99,10 @@
             <label class="bicycles__menu-label" for="TT">ТТ</label>
             <input class="bicycles__menu-item" id="TT" type="radio" name="bicycles" value="TT" autocomplete='off'>
           </div>
-          <select class="bicycles__drop-down-menu" name="" id="">
+          <select class="bicycles__drop-down-menu" name="select-type-of-bikes">
             <option class="bicycles__drop-down-menu-item" value="shosse" selected>Шоссе</option>
-            <option class="bicycles__drop-down-menu-item" value="gravel" autocomplete="off">Грэвел</option>
-            <option class="bicycles__drop-down-menu-item" value="TT" autocomplete="off">ТТ</option>
+            <option class="bicycles__drop-down-menu-item" value="gravel">Грэвел</option>
+            <option class="bicycles__drop-down-menu-item" value="TT">ТТ</option>
           </select>
 
       </div>
@@ -208,7 +210,7 @@
 
   <footer class="footer page__footer">
     <h3 class="footer__title">Подпишитесь на рассылку —</h3>
-    <form class="footer__form" action="">
+    <form class="footer__form">
       <input class="footer__input" type="email" name="email" placeholder="Ваш e-mail" required>
       <input class="footer__submit" type="submit" value="ok">
       <div class="footer__alert">Введите верный e-mail!</div>
