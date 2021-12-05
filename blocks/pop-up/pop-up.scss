@@ -1,0 +1,18 @@
+.pop-up {
+  display: flex;
+  flex-direction: column;
+  row-gap: 100px;
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  z-index: 3;
+  width: 100%;
+  padding: 26px 20px 36px;
+  box-sizing: border-box;
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  visibility: hidden;
+  opacity: 0;
+
+  transition: visibility .3s, opacity .3s linear;
+}

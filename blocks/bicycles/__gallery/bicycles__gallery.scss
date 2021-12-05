@@ -2,4 +2,12 @@
   display: flex;
   column-gap: 30px;
   padding-top: 120px;
+  height: auto;
+}
+
+@media screen and (max-width: 560px) {
+  .bicycles__gallery {
+    padding-top: 20px;
+    column-gap: 0;
+  }
 }

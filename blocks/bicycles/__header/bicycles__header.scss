@@ -2,3 +2,10 @@
   display: flex;
   justify-content: space-between;
 }
+
+@media screen and (max-width: 560px) {
+  .bicycles__header {
+    flex-direction: column;
+    row-gap: 40px;
+  }
+}

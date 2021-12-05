@@ -1,6 +1,26 @@
 .covers__controllers {
+  grid-column: 1;
+  grid-row: 4/5;
+  z-index: 2;
+
   margin: 0;
-  margin-top: 50px;
+  // margin-top: 50px;
   display: flex;
   column-gap: 20px;
+}
+
+@media screen and (max-width: 560px) {
+  .covers__controllers {
+    grid-column: 1;
+    grid-row: 1/2;
+    align-self: center;
+    justify-self: end;
+    column-gap: 10px;
+
+    /* position: absolute;
+    top: -80px;
+    left: calc(100% - 58px); */
+
+    margin: 0;
+  }
 }

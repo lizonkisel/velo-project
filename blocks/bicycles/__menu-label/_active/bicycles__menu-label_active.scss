@@ -1,9 +1,9 @@
 .bicycles__menu-label_active {
   font-weight: 600;
-  color: #151515;
+  color: var(--font-color);
   opacity: 1;
 
   &:hover {
-    opacity: 0.75;
+    opacity: var(--opacity-link);
   }
 }

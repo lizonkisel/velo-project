@@ -1,0 +1,12 @@
+.pop-up__switcher-wrapper {
+  position: relative;
+  display: none;
+  align-self: center;
+
+}
+
+@media screen and (max-width: 560px) {
+  .pop-up__switcher-wrapper {
+    display: block;
+  }
+}

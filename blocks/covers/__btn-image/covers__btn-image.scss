@@ -1,0 +1,10 @@
+.covers__btn-image {
+  filter: var(--arrow-color);
+}
+
+@media screen and (max-width: 560px) {
+  .covers__btn-image {
+    width: 4.5px;
+    height: 10px;
+  }
+}

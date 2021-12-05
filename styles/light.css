@@ -1,0 +1,16 @@
+:root {
+  --font-color: #151515;
+  --bg-color: #f4f4f4;
+  --bg-color-footer: #EFEFEF;
+  --thin-font-color: #222222;
+  --opacity-link: .75;
+  --opacity-thin: .6;
+  --arrow-bg-color: #EBEBEB;
+  --arrow-color: invert(0);
+  --footer-form-border: rgba(199, 199, 199, 0.5);
+  --footer-form-border-active: #C7C7C7;
+  --footer-author-color: #CFCFCF;
+  --icon-sun: url(../images/icon-sun-light.svg);
+  --icon-moon: url(../images/icon-moon-light.svg);
+  --footer-switcher-color: #FFFFFF;
+}

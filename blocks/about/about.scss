@@ -5,3 +5,11 @@
   column-gap: 250px / 1440px * 100vw;
   row-gap: 50px;
 }
+
+@media screen and (max-width: 560px) {
+  .about {
+    grid-template-columns: 1fr;
+    grid-template-rows: fit-content(284px) 1fr auto auto;
+    row-gap: 40px;
+  }
+}

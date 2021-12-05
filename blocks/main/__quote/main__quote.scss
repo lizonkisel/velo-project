@@ -2,3 +2,11 @@
   box-sizing: border-box;
   padding: 120px 120px 60px 120px;
 }
+
+@media screen and (max-width: 560px) {
+  .main__quote {
+    // padding: 40px 18px;
+    padding: 20px 0 80px 0;
+    border-bottom: 1px solid #E3E3E3;
+  }
+}

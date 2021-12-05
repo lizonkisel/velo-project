@@ -1,4 +1,11 @@
 .footer__form {
   margin: 0;
-  margin: 50px 0 100px 0;
+  margin: 50px 0 74px 0;
+}
+
+@media screen and (max-width: 560px) {
+  .footer__form {
+    position: relative;
+    margin: 40px 0 73px 0;
+  }
 }

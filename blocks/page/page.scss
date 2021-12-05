@@ -1,5 +1,5 @@
 .page {
-  background-color: $bg-color-light;
-  color: $font-color-light;
   font-family: $font-family;
+  background-color: var(--bg-color);
+  color: var(--font-color);
 }

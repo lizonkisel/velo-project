@@ -1,4 +1,9 @@
 .covers__image {
+  grid-column: 1;
+  grid-row: 1/2;
+
+  z-index: 1;
+
   width: 100%;
   object-fit: contain;
 }

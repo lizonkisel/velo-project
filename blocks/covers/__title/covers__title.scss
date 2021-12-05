@@ -1,4 +1,7 @@
 .covers__title {
+  grid-column: 1;
+  grid-row: 1/2;
+
   width: 100%;
   overflow: hidden;
   font-weight: 700;
@@ -6,4 +9,15 @@
   line-height: 60px;
   letter-spacing: -0.5px;
   margin: 0;
+}
+
+@media screen and (max-width: 560px) {
+  .covers__title {
+    grid-column: 1;
+    grid-row: 1/2;
+
+    z-index: 1;
+    font-size: 32px;
+    line-height: 40px;
+  }
 }

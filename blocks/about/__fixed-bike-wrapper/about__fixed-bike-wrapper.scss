@@ -1,12 +1,19 @@
 .about__fixed-bike-wrapper {
   position: absolute;
-  top: 327px;
-  right: 370px;
+  top: 347px;
+  right: 0;
+  width: 810px / 1440px * 100vw;
+  height: 430px / 1440px * 100vw;
+}
 
-  display: flex;
-  justify-content: center;
+@media screen and (max-width: 560px) {
+  .about__fixed-bike-wrapper {
+    top: calc(151 / 320 * 100vw + 160px);
+    left: 0;
 
-  width: 810px;
-  height: 430px;
+    width: 181px / 320px * 100vw;
+    height: 197px / 320px * 100vw;
 
+    padding: 0 18px;
+  }
 }

@@ -1,0 +1,15 @@
+.covers {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, auto);
+  row-gap: 50px;
+}
+
+@media screen and (max-width: 560px) {
+  .covers {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    row-gap: 40px;
+  }
+}

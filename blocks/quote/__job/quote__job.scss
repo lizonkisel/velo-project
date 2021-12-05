@@ -1,8 +1,17 @@
 .quote__job {
   font-size: 16px;
   line-height: 28px;
-  color: #222222;
+  color: var(--thin-font-color);
   opacity: 0.7;
 
   margin: 0;
+}
+
+@media screen and (max-width: 560px) {
+  .quote__job {
+    font-size: 23px;
+    line-height: 29px;
+    font-size: 10px;
+    line-height: 16px;
+  }
 }

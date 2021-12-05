@@ -1,6 +1,18 @@
 .about__fixed-bike {
   position: sticky;
-  top: 0px;
-  width: 440px;
-  height: 330px;
+  top: 74px;
+  width: 340px / 1440px * 100vw;
+  height: 260px / 1440px * 100vw;
+  background-color: #F4F4F4;
+  padding: 20px 50px;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 560px) {
+  .about__fixed-bike {
+    width: 181px / 320px * 100vw;
+    height: 139px / 320px * 100vw;
+
+    padding: 10px 26px;
+  }
 }

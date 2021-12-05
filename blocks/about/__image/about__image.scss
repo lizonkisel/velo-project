@@ -7,3 +7,14 @@
   max-width: 610px;
   max-height: 100%;
 }
+
+
+@media screen and (max-width: 560px) {
+  .about__image {
+    grid-column: 1;
+    grid-row: 2/3;
+    justify-self: end;
+
+    width: 254px / 320px * 100vw;
+  }
+}

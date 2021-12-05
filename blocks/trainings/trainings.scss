@@ -1,7 +1,22 @@
 .trainings {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: min-content 1fr auto;
+  column-gap: 160px;
+  row-gap: 50px;
+
+  /* display: flex;
   justify-content: space-between;
-  column-gap: 20px;
+  column-gap: 20px; */
 
   transition: opacity .3s ease-in-out;
+}
+
+@media screen and (max-width: 560px) {
+  .trainings {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    row-gap: 40px;
+  }
 }
